@@ -1,7 +1,9 @@
 import * as React from "react";
 
 const Frame = () => {
-  return <div>x</div>;
+  return <div>xsss</div>;
 };
+
+Frame.displayName = "Frame";
 
 export default Frame;
