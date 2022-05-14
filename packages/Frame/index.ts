@@ -1,3 +1,3 @@
-import Frame from "./Frame";
+export { default as Frame } from './Frame';
 
-export default Frame;
+export * from './types';
