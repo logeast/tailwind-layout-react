@@ -45,7 +45,6 @@ jobs:
         run: pnpm build
 
       - name: create versions or publish to npm registry
-        run: pnpm publish --no-git-checks
 
       # - name: create versions or publish to npm registry
       #   uses: changesets/action@v1
@@ -56,3 +55,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpm publish --no-git-checks
