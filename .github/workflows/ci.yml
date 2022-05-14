@@ -7,8 +7,12 @@ on:
   push:
     branches: main
 
+env:
+  CI: true
+  PNPM_CACHE_FOLDER: .pnpm-store
+
 jobs:
-  build:
+  version:
     runs-on: ubuntu-latest
     steps:
       - name: checkout code repository
@@ -21,8 +25,15 @@ jobs:
         with:
           node-version: 15.x
 
-      - name: setup pnpm
-        uses: pnpm/action-setup@v2.2.1
+      - name: load cache
+        uses: actions/cache@v3
+        with:
+            path: |
+                ~/.pnpm-store
+            key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+            restore-keys: |
+                ${{ runner.os }}
+      - uses: pnpm/action-setup@v2.2.1
         with:
           version: latest
           run_install: true
@@ -33,8 +44,9 @@ jobs:
       - name: create versions or publish to npm registry
         uses: changesets/action@v1
         with:
-          publish: pnpm release
+          version: pnpm ci:version
           commit: 'ci(changeset): release tailwind-layout-react'
+          publish: pnpm ci:publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
