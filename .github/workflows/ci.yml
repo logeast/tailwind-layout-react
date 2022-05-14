@@ -43,13 +43,14 @@ jobs:
 
       - name: build packages
         run: pnpm build
+        run: pnpm publish
 
-      - name: create versions or publish to npm registry
-        uses: changesets/action@v1
-        with:
-          version: pnpm ci:version
-          commit: 'ci(changeset): release tailwind-layout-react'
-          publish: pnpm ci:publish
+      # - name: create versions or publish to npm registry
+      #   uses: changesets/action@v1
+      #   with:
+      #     version: pnpm ci:version
+      #     commit: 'ci(changeset): release tailwind-layout-react'
+      #     publish: pnpm ci:publish
         env:
-          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
