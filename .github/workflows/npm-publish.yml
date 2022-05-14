@@ -1,0 +1,40 @@
+# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
+# For more information see: https://help.github.com/actions/language-and-framework-guides/publishing-nodejs-packages
+
+name: Node.js Package
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code repository
+        uses: actions/checkout@v3
+        with:
+            fetch-depth: 0
+            
+      - name: setup node.js
+        uses: actions/setup-node@v3
+        with:
+            node-version: 15.x
+            
+      - name: setup pnpm
+        uses: pnpm/action-setup@v2.2.1
+        with:
+            version: latest
+            run_install: true
+      
+      - name: build packages
+        run: pnpm build
+
+      - name: create versions or publish to npm registry
+        uses: changesets/action@v1
+        with:
+            publish: pnpm release
+            commit: 'ci(changeset): release tailwind-layout-react'
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
