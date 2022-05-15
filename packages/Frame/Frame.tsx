@@ -7,28 +7,79 @@ import {
   columnsClass,
   displayClass,
   floatClass,
+  heightClass,
+  marginBottomClass,
+  marginClass,
+  marginLeftClass,
+  marginRightClass,
+  marginTopClass,
+  marginXClass,
+  marginYClass,
+  maxHeightClass,
+  maxWidthClass,
+  minHeightClass,
+  minWidthClass,
   overflowClass,
+  paddingBottomClass,
+  paddingClass,
+  paddingLeftClass,
+  paddingRightClass,
+  paddingTopClass,
+  paddingXClass,
+  paddingYClass,
   positionClass,
+  spaceXClass,
+  spaceYClass,
   visibleClass,
+  widthClass,
   zIndexClass
 } from '../utils/classes';
 import { FrameProps } from './types';
 
 const Frame = (props: FrameProps) => {
   const {
-    aspect,
+    // Base
     className,
-    clear,
+    style,
     children,
-    columns,
+
+    // Layout
+    aspect,
     boxSizing,
+    clear,
+    columns,
     display,
     float,
     overflow,
     position,
-    style,
     visible,
-    zIndex
+    zIndex,
+
+    // Space
+    p,
+    px,
+    py,
+    pt,
+    pr,
+    pb,
+    pl,
+    m,
+    mx,
+    my,
+    mt,
+    mr,
+    mb,
+    ml,
+    spaceX,
+    spaceY,
+
+    // Sizing
+    w,
+    minW,
+    maxW,
+    h,
+    minH,
+    maxH
   } = props;
 
   const renderCls = classnames(
@@ -42,6 +93,33 @@ const Frame = (props: FrameProps) => {
     positionClass(position),
     visibleClass(visible),
     zIndexClass(zIndex),
+
+    // Spacing
+    paddingClass(p),
+    paddingXClass(px),
+    paddingYClass(py),
+    paddingTopClass(pt),
+    paddingRightClass(pr),
+    paddingBottomClass(pb),
+    paddingLeftClass(pl),
+    marginClass(m),
+    marginXClass(mx),
+    marginYClass(my),
+    marginTopClass(mt),
+    marginRightClass(mr),
+    marginBottomClass(mb),
+    marginLeftClass(ml),
+    spaceXClass(spaceX),
+    spaceYClass(spaceY),
+
+    // Sizing
+    widthClass(w),
+    minWidthClass(minW),
+    maxWidthClass(maxW),
+    heightClass(h),
+    minHeightClass(minH),
+    maxHeightClass(maxH),
+
     className
   );
 

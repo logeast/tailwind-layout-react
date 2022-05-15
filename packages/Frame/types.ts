@@ -9,28 +9,53 @@ import {
   OverflowType,
   PositionType,
   VisibleType,
-  ZIndex
+  ZIndexType
 } from '../utils/layout-types';
+import {
+  maxHeightType,
+  maxWithType,
+  minHeightType,
+  minWithType,
+  WidthOrHeightType
+} from '../utils/sizing-types';
+import { MarginType, PaddingType, SpaceType } from '../utils/spacing-types';
 
 export interface FrameProps extends BaseProps {
-  /** Utilities for controlling the aspect ratio of an element. */
+  // Layout
   aspect?: AspectType;
-  /** Utilities for controlling how the browser should calculate an element's total size. */
   boxSizing?: BoxSizingType;
-  /** Utilities for controlling the wrapping of content around an element. */
   clear?: ClearType;
-  /** Utilities for controlling the number of columns within an element. */
   columns?: ColumnsType;
-  /** Utilities for controlling the display box type of an element. */
   display?: DisplayType;
-  /** Utilities for controlling the wrapping of content around an element. */
   float?: FloatType;
-  /** Utilities for controlling how an element handles content that is too large for the container. */
   overflow?: OverflowType;
-  /** Utilities for controlling how an element is positioned in the DOM. */
   position?: PositionType;
-  /** Utilities for controlling the visibility of an element. */
   visible?: VisibleType;
-  /**  Utilities for controlling the stack order of an element. */
-  zIndex?: ZIndex;
+  zIndex?: ZIndexType;
+
+  // Space
+  p?: PaddingType;
+  px?: PaddingType;
+  py?: PaddingType;
+  pt?: PaddingType;
+  pr?: PaddingType;
+  pb?: PaddingType;
+  pl?: PaddingType;
+  m?: MarginType;
+  mx?: MarginType;
+  my?: MarginType;
+  mt?: MarginType;
+  mr?: MarginType;
+  mb?: MarginType;
+  ml?: MarginType;
+  spaceX?: SpaceType;
+  spaceY?: SpaceType;
+
+  // Sizing
+  w?: WidthOrHeightType;
+  minW?: minWithType;
+  maxW?: maxWithType;
+  h?: WidthOrHeightType;
+  minH?: minHeightType;
+  maxH?: maxHeightType;
 }

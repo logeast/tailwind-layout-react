@@ -57,49 +57,6 @@ export declare type DisplayType =
 
 export declare type FloatType = 'left' | 'right' | 'none';
 
-const comomSpaces = [
-  '0',
-  'px',
-  '0.5',
-  '1',
-  '1.5',
-  '2',
-  '2.5',
-  '3',
-  '3.5',
-  '4',
-  '5',
-  '6',
-  '7',
-  '8',
-  '9',
-  '10',
-  '11',
-  '12',
-  '14',
-  '16',
-  '20',
-  '24',
-  '28',
-  '32',
-  '36',
-  '40',
-  '44',
-  '48',
-  '52',
-  '56',
-  '60',
-  '64',
-  '72',
-  '80',
-  '96'
-] as const;
-export declare type PaddingType = typeof comomSpaces;
-
-export declare type MarginType = typeof comomSpaces;
-
-export declare type SpaceType = 'reverse' | typeof comomSpaces;
-
 export declare type OverflowType =
   | 'auto'
   | 'hidden'
@@ -126,4 +83,11 @@ export declare type PositionType =
 
 export declare type VisibleType = 'visible' | 'invisible';
 
-export declare type ZIndex = '0' | '10' | '20' | '30' | '40' | '50' | 'auto';
+export declare type ZIndexType =
+  | '0'
+  | '10'
+  | '20'
+  | '30'
+  | '40'
+  | '50'
+  | 'auto';
