@@ -64,13 +64,9 @@ const sizes = [
   'full'
 ] as const;
 
-export declare type FlexBasisType = typeof sizes;
+export declare type FlexBasisType = typeof sizes[number];
 
-export declare type FlexDirectionType =
-  | 'row'
-  | 'row-reverse'
-  | 'col'
-  | 'col-reverse';
+export declare type FlexDirectionType = 'row' | 'row-reverse' | 'col' | 'col-reverse';
 
 export declare type FlexWrapType = 'wrap' | 'wrap-reverse' | 'nowrap';
 
@@ -93,26 +89,11 @@ export declare type OrderType =
   | 'last'
   | 'none';
 
-export declare type JustifyOrAlignOrPlaceContentType =
-  | 'start'
-  | 'end'
-  | 'center'
-  | 'between'
-  | 'around'
-  | 'evenly';
+export declare type JustifyOrAlignOrPlaceContentType = 'start' | 'end' | 'center' | 'between' | 'around' | 'evenly';
 
-export declare type JustifyOrAlignOrPlaceItemsType =
-  | 'start'
-  | 'end'
-  | 'center'
-  | 'stretch';
+export declare type JustifyOrAlignOrPlaceItemsType = 'start' | 'end' | 'center' | 'stretch';
 
-export declare type JustifyOrAlignOrPlaceSelfType =
-  | 'auto'
-  | 'start'
-  | 'end'
-  | 'center'
-  | 'stretch';
+export declare type JustifyOrAlignOrPlaceSelfType = 'auto' | 'start' | 'end' | 'center' | 'stretch';
 
 export declare type GridTemplateColumnsType =
   | '1'
@@ -162,40 +143,13 @@ export declare type GridColumnStartOrEndType =
   | '13'
   | 'auto';
 
-export declare type GridTemplateRowsType =
-  | '1'
-  | '2'
-  | '3'
-  | '4'
-  | '5'
-  | '6'
-  | 'none';
+export declare type GridTemplateRowsType = '1' | '2' | '3' | '4' | '5' | '6' | 'none';
 
-export declare type GridRowSpanType =
-  | '1'
-  | '2'
-  | '3'
-  | '4'
-  | '5'
-  | '6'
-  | '7'
-  | 'full';
+export declare type GridRowSpanType = '1' | '2' | '3' | '4' | '5' | '6' | '7' | 'full';
 
-export declare type GridRowStartOrEndType =
-  | '1'
-  | '2'
-  | '3'
-  | '4'
-  | '5'
-  | '6'
-  | '7'
-  | 'auto';
+export declare type GridRowStartOrEndType = '1' | '2' | '3' | '4' | '5' | '6' | '7' | 'auto';
 
-export declare type GridAutoFlowType =
-  | 'row'
-  | 'col'
-  | 'row-dense'
-  | 'col-dense';
+export declare type GridAutoFlowType = 'row' | 'col' | 'row-dense' | 'col-dense';
 
 export declare type GridAutoColumnsOrRowsType = 'auto' | 'min' | 'max' | 'fr';
 
@@ -237,4 +191,4 @@ const gapSizes = [
   '96'
 ] as const;
 
-export declare type GapType = typeof gapSizes;
+export declare type GapType = typeof gapSizes[number];

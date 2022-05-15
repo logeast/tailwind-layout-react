@@ -1,10 +1,12 @@
-import * as React from "react";
-import { Frame } from "../packages";
+import * as React from 'react';
+import { Frame } from '../packages';
 
 function App() {
   return (
     <div className="App">
-      <Frame>Frame layout</Frame>
+      <Frame className="xx" w="full">
+        Frame layout
+      </Frame>
     </div>
   );
 }

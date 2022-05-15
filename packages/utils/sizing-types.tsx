@@ -70,7 +70,7 @@ const percents = [
   '10/12',
   '11/12'
 ] as const;
-export declare type WidthOrHeightType = typeof numbers | typeof percents;
+export declare type WidthOrHeightType = typeof numbers[number] | typeof percents[number];
 
 export declare type minWithType = '0' | 'full' | 'min' | 'max' | 'fit';
 
@@ -99,12 +99,6 @@ export declare type maxWithType =
   | 'screen-xl'
   | 'screen-2xl';
 
-export declare type minHeightType =
-  | '0'
-  | 'full'
-  | 'screen'
-  | 'min'
-  | 'max'
-  | 'fit';
+export declare type minHeightType = '0' | 'full' | 'screen' | 'min' | 'max' | 'fit';
 
-export declare type maxHeightType = typeof numbers;
+export declare type maxHeightType = typeof numbers[number];

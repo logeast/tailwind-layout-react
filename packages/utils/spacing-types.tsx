@@ -36,8 +36,8 @@ const sizesOrAmounts = [
   '96'
 ] as const;
 
-export declare type PaddingType = typeof sizesOrAmounts;
+export declare type PaddingType = typeof sizesOrAmounts[number];
 
-export declare type MarginType = typeof sizesOrAmounts;
+export declare type MarginType = typeof sizesOrAmounts[number];
 
-export declare type SpaceType = 'reverse' | typeof sizesOrAmounts;
+export declare type SpaceType = 'reverse' | typeof sizesOrAmounts[number];

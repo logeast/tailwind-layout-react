@@ -34,6 +34,7 @@ import {
   widthClass,
   zIndexClass
 } from '../utils/classes';
+
 import { FrameProps } from './types';
 
 const Frame = (props: FrameProps) => {
@@ -83,6 +84,7 @@ const Frame = (props: FrameProps) => {
   } = props;
 
   const renderCls = classnames(
+    // Layout
     aspectClass(aspect),
     boxSizingClass(boxSizing),
     clearClass(clear),

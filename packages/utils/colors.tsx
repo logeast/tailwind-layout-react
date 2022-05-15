@@ -1,4 +1,4 @@
-export const colorCommon = ['inherit', 'current', 'transparent'];
+export const colorCommon = ['inherit', 'current', 'transparent'] as const;
 
 export const colorBlack = 'black';
 
@@ -301,4 +301,6 @@ export const colors = [
   ...colorFuchsia,
   ...colorPink,
   ...colorRose
-];
+] as const;
+
+export declare type ColorType = typeof colorCommon[number] | typeof colors[number];
