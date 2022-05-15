@@ -10,6 +10,23 @@ import {
   BackgroundGradientColorStopsType
 } from './backgrounds-types';
 import {
+  BorderRadiusType,
+  BorderWidthType,
+  BorderColorType,
+  BorderStyleType,
+  DivideWidthType,
+  DivideColorType,
+  DivideStyleType,
+  OutlineWidthType,
+  OutlineColorType,
+  OutlineStyleType,
+  OutlineOffsetType,
+  RingWidthType,
+  RingColorType,
+  RingOffsetType,
+  RingOffsetColorType
+} from './borders-types';
+import {
   AspectType,
   BoxSizingType,
   ClearType,
@@ -115,15 +132,39 @@ export const whiteSpaceClass = (type?: WhitespaceType) => type && `whitespace-${
 export const breakClass = (type?: WordBreakType) => type && `break-${type}`;
 
 // Backgrounds
-export const bgAttachment = (type: BackgroundAttachmentType) => type && `bg-${type}`;
-export const bgClip = (type: BackgroundClipType) => type && `bg-clip-${type}`;
-export const bgColor = (type: BackgroundColorType) => type && `bg-${type}`;
-export const bgOrigin = (type: BackgroundOriginType) => type && `bg-origin-${type}`;
-export const bgPosition = (type: BackgroundPositionType) => type && `bg-${type}`;
-export const bgRepeat = (type: BackgroundRepeatType) => type && `bg-${type}`;
-export const bgSize = (type: BackgroundSizeType) => type && `bg-${type}`;
-export const bgGradientDirection = (type: BackgroundGradientDirectionType) =>
+export const bgAttachmentClass = (type?: BackgroundAttachmentType) => type && `bg-${type}`;
+export const bgClipClass = (type?: BackgroundClipType) => type && `bg-clip-${type}`;
+export const bgColorClass = (type?: BackgroundColorType) => type && `bg-${type}`;
+export const bgOriginClass = (type?: BackgroundOriginType) => type && `bg-origin-${type}`;
+export const bgPositionClass = (type?: BackgroundPositionType) => type && `bg-${type}`;
+export const bgRepeatClass = (type?: BackgroundRepeatType) => type && `bg-${type}`;
+export const bgSizeClass = (type?: BackgroundSizeType) => type && `bg-${type}`;
+export const bgGradientDirectionClass = (type?: BackgroundGradientDirectionType) =>
   type && type === 'none' ? 'bg-none' : `bg-gradient-to-${type}`;
-export const bgGradientFromColor = (type: BackgroundGradientColorStopsType) => type && `from-${type}`;
-export const bgGradientViaColor = (type: BackgroundGradientColorStopsType) => type && `via-${type}`;
-export const bgGradientToColor = (type: BackgroundGradientColorStopsType) => type && `to-${type}`;
+export const bgGradientFromColorClass = (type?: BackgroundGradientColorStopsType) => type && `from-${type}`;
+export const bgGradientViaColorClass = (type?: BackgroundGradientColorStopsType) => type && `via-${type}`;
+export const bgGradientToColorClass = (type?: BackgroundGradientColorStopsType) => type && `to-${type}`;
+
+// Border
+export const roundedClass = (type?: BorderRadiusType) => type && `rounded-${type}`;
+export const borderWClass = (type?: BorderWidthType) => type && `border-${type}`;
+export const borderXWClass = (type?: BorderWidthType) => type && `border-x-${type}`;
+export const borderYWClass = (type?: BorderWidthType) => type && `border-y-${type}`;
+export const borderTWClass = (type?: BorderWidthType) => type && `border-t-${type}`;
+export const borderRWClass = (type?: BorderWidthType) => type && `border-r-${type}`;
+export const borderBWClass = (type?: BorderWidthType) => type && `border-b-${type}`;
+export const borderLWClass = (type?: BorderWidthType) => type && `border-l-${type}`;
+export const borderColorClass = (type?: BorderColorType) => type && `border-${type}`;
+export const borderStyleClass = (type?: BorderStyleType) => type && `border-${type}`;
+export const divideXWClass = (type?: DivideWidthType) => (type && type === true ? 'divide-x' : `divide-x-${type}`);
+export const divideYWClass = (type?: DivideWidthType) => (type && type === true ? 'divide-y' : `divide-y-${type}`);
+export const divideColorClass = (type?: DivideColorType) => type && `divide-${type}`;
+export const divideStyleClass = (type?: DivideStyleType) => type && `divide-${type}`;
+export const outlineWClass = (type?: OutlineWidthType) => type && `outline-${type}`;
+export const outlineColorClass = (type?: OutlineColorType) => type && `outline-${type}`;
+export const outlineStyleClass = (type?: OutlineStyleType) => (type && type === true ? 'outline' : `outline-${type}`);
+export const outlineOffsetClass = (type?: OutlineOffsetType) => type && `outline-offset-${type}`;
+export const ringWClass = (type?: RingWidthType) => (type && type === true ? 'ring' : `ring-${type}`);
+export const ringColorClass = (type?: RingColorType) => type && `ring-${type}`;
+export const ringOffsetClass = (type?: RingOffsetType) => type && `ring-offset-${type}`;
+export const ringOffsetColorClass = (type?: RingOffsetColorType) => type && `ring-offset-${type}`;
