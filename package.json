@@ -27,7 +27,8 @@
     "vite": "^2.9.7"
   },
   "files": [
-    "dist"
+    "dist",
+    "packages"
   ],
   "main": "./dist/tailwind-layout-react.umd.js",
   "module": "./dist/tailwind-layout-react.es.js",
@@ -36,5 +37,16 @@
       "import": "./dist/tailwind-layout-react.es.js",
       "require": "./dist/tailwind-layout-react.umd.js"
     }
-  }
+  },
+  "keywords": [
+    "tailwindcss",
+    "react",
+    "ui",
+    "layout"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/logeast/tailwind-layout-react"
+  },
+  "homepage": "https://github.com/logeast/tailwind-layout-react"
 }
