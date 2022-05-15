@@ -1,6 +1,7 @@
 {
   "name": "tailwind-layout-react",
   "version": "0.0.4",
+  "license": "MIT",
   "scripts": {
     "dev": "vite --port 8848",
     "build": "tsc && vite build",
