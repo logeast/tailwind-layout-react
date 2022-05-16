@@ -14,7 +14,7 @@ export const colorSlate = [
   'slate-600',
   'slate-700',
   'slate-800',
-  'slate-900'
+  'slate-900',
 ] as const;
 
 export const colorGray = [
@@ -27,7 +27,7 @@ export const colorGray = [
   'gray-600',
   'gray-700',
   'gray-800',
-  'gray-900'
+  'gray-900',
 ] as const;
 
 export const colorZinc = [
@@ -40,7 +40,7 @@ export const colorZinc = [
   'zinc-600',
   'zinc-700',
   'zinc-800',
-  'zinc-900'
+  'zinc-900',
 ] as const;
 
 export const colorNeutral = [
@@ -53,7 +53,7 @@ export const colorNeutral = [
   'neutral-600',
   'neutral-700',
   'neutral-800',
-  'neutral-900'
+  'neutral-900',
 ] as const;
 
 export const colorStone = [
@@ -66,7 +66,7 @@ export const colorStone = [
   'stone-600',
   'stone-700',
   'stone-800',
-  'stone-900'
+  'stone-900',
 ] as const;
 
 export const colorRed = [
@@ -79,7 +79,7 @@ export const colorRed = [
   'red-600',
   'red-700',
   'red-800',
-  'red-900'
+  'red-900',
 ] as const;
 
 export const colorOrange = [
@@ -92,7 +92,7 @@ export const colorOrange = [
   'orange-600',
   'orange-700',
   'orange-800',
-  'orange-900'
+  'orange-900',
 ] as const;
 
 export const colorAmber = [
@@ -105,7 +105,7 @@ export const colorAmber = [
   'amber-600',
   'amber-700',
   'amber-800',
-  'amber-900'
+  'amber-900',
 ] as const;
 
 export const colorYellow = [
@@ -118,7 +118,7 @@ export const colorYellow = [
   'yellow-600',
   'yellow-700',
   'yellow-800',
-  'yellow-900'
+  'yellow-900',
 ] as const;
 
 export const colorLime = [
@@ -131,7 +131,7 @@ export const colorLime = [
   'lime-600',
   'lime-700',
   'lime-800',
-  'lime-900'
+  'lime-900',
 ] as const;
 
 export const colorEmerald = [
@@ -144,7 +144,7 @@ export const colorEmerald = [
   'emerald-600',
   'emerald-700',
   'emerald-800',
-  'emerald-900'
+  'emerald-900',
 ] as const;
 
 export const colorTeal = [
@@ -157,7 +157,7 @@ export const colorTeal = [
   'teal-600',
   'teal-700',
   'teal-800',
-  'teal-900'
+  'teal-900',
 ] as const;
 
 export const colorCyan = [
@@ -170,7 +170,7 @@ export const colorCyan = [
   'cyan-600',
   'cyan-700',
   'cyan-800',
-  'cyan-900'
+  'cyan-900',
 ] as const;
 
 export const colorSky = [
@@ -183,7 +183,7 @@ export const colorSky = [
   'sky-600',
   'sky-700',
   'sky-800',
-  'sky-900'
+  'sky-900',
 ] as const;
 
 export const colorBlue = [
@@ -196,7 +196,7 @@ export const colorBlue = [
   'blue-600',
   'blue-700',
   'blue-800',
-  'blue-900'
+  'blue-900',
 ] as const;
 
 export const colorIndigo = [
@@ -209,7 +209,7 @@ export const colorIndigo = [
   'indigo-600',
   'indigo-700',
   'indigo-800',
-  'indigo-900'
+  'indigo-900',
 ] as const;
 
 export const colorViolet = [
@@ -222,7 +222,7 @@ export const colorViolet = [
   'violet-600',
   'violet-700',
   'violet-800',
-  'violet-900'
+  'violet-900',
 ] as const;
 
 export const colorPurple = [
@@ -235,7 +235,7 @@ export const colorPurple = [
   'purple-600',
   'purple-700',
   'purple-800',
-  'purple-900'
+  'purple-900',
 ] as const;
 
 export const colorFuchsia = [
@@ -248,7 +248,7 @@ export const colorFuchsia = [
   'fuchsia-600',
   'fuchsia-700',
   'fuchsia-800',
-  'fuchsia-900'
+  'fuchsia-900',
 ] as const;
 
 export const colorPink = [
@@ -261,7 +261,7 @@ export const colorPink = [
   'pink-600',
   'pink-700',
   'pink-800',
-  'pink-900'
+  'pink-900',
 ] as const;
 
 export const colorRose = [
@@ -274,7 +274,7 @@ export const colorRose = [
   'rose-600',
   'rose-700',
   'rose-800',
-  'rose-900'
+  'rose-900',
 ] as const;
 
 export const colors = [
@@ -300,7 +300,7 @@ export const colors = [
   ...colorPurple,
   ...colorFuchsia,
   ...colorPink,
-  ...colorRose
+  ...colorRose,
 ] as const;
 
 export declare type ColorType = typeof colorCommon[number] | typeof colors[number];

@@ -5,7 +5,7 @@ import {
   LayoutProps,
   SizingProps,
   SpacingProps,
-  TypographyProps
+  TypographyProps,
 } from '../utils/props';
 
 export type FrameProps = BaseProps &

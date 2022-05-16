@@ -32,7 +32,7 @@ import {
   spaceYClass,
   visibleClass,
   widthClass,
-  zIndexClass
+  zIndexClass,
 } from '../utils/classes';
 
 import { FrameProps } from './types';
@@ -42,7 +42,7 @@ const Frame = (props: FrameProps) => {
     // Base
     className,
     style,
-    children
+    children,
   } = props;
 
   const renderCls = classnames(
