@@ -1,4 +1,4 @@
-import { ColorType } from './colors';
+import { ColorType } from './colors-types';
 
 export declare type AccentColorType = ColorType;
 
@@ -85,7 +85,7 @@ const sizes = [
   '64',
   '72',
   '80',
-  '96'
+  '96',
 ] as const;
 export declare type ScrollMarginType = typeof sizes[number];
 

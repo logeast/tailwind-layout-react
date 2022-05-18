@@ -1,17 +1,22 @@
+import React from 'react';
+import { BaseProps } from '../utils/props';
 import {
   BackgroundsProps,
-  BaseProps,
   BordersProps,
   LayoutProps,
   SizingProps,
   SpacingProps,
   TypographyProps,
-} from '../utils/props';
+} from '../utils/types';
 
-export type FrameProps = BaseProps &
+export type FrameUnionProps = BaseProps &
   LayoutProps &
   SpacingProps &
   SizingProps &
   TypographyProps &
   BackgroundsProps &
   BordersProps;
+
+export interface FrameProps extends FrameUnionProps {
+  as?: React.ElementType;
+}

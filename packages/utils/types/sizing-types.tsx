@@ -1,3 +1,6 @@
+import classNames from 'classnames';
+
+// #region [Single Type]
 const numbers = [
   '0',
   'px',
@@ -38,7 +41,7 @@ const numbers = [
   'screen',
   'min',
   'max',
-  'fit'
+  'fit',
 ] as const;
 
 const percents = [
@@ -68,7 +71,7 @@ const percents = [
   '8/12',
   '9/12',
   '10/12',
-  '11/12'
+  '11/12',
 ] as const;
 export declare type WidthOrHeightType = typeof numbers[number] | typeof percents[number];
 
@@ -102,3 +105,29 @@ export declare type maxWithType =
 export declare type minHeightType = '0' | 'full' | 'screen' | 'min' | 'max' | 'fit';
 
 export declare type maxHeightType = typeof numbers[number];
+// #endregion
+
+// #region [Components Props]
+export interface SizingProps {
+  w?: WidthOrHeightType;
+  minW?: minWithType;
+  maxW?: maxWithType;
+  h?: WidthOrHeightType;
+  minH?: minHeightType;
+  maxH?: maxHeightType;
+}
+// #endregion
+
+// #region [Components ClassNames]
+export const sizingClassNames = (props: SizingProps) => {
+  const { w, minW, maxW, h, minH, maxH } = props;
+  return classNames({
+    [`w-${w}`]: w,
+    [`minW-${minW}`]: minW,
+    [`maxW-${maxW}`]: maxW,
+    [`h-${h}`]: h,
+    [`minH-${minH}`]: minH,
+    [`maxH-${maxH}`]: maxH,
+  });
+};
+// #endregion

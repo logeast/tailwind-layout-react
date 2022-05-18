@@ -1,4 +1,4 @@
-import { ColorType } from './colors';
+import { ColorType } from './colors-types';
 
 export declare type BoxShadowType = 'sm' | true | 'md' | 'lg' | 'xl' | '2xl' | 'inner' | 'none';
 
