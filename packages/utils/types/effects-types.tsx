@@ -1,5 +1,8 @@
 import { ColorType } from './colors-types';
+import classNames from 'classnames';
+import { stringOrBooleanCls } from '../classes';
 
+// #region [Single Type]
 export declare type BoxShadowType = 'sm' | true | 'md' | 'lg' | 'xl' | '2xl' | 'inner' | 'none';
 
 export declare type BoxShadowColorType = ColorType;
@@ -56,3 +59,28 @@ export declare type BackgroundBlendModeType =
   | 'saturation'
   | 'color'
   | 'luminosity';
+
+// #endregion
+
+// #region [Components Props]
+export interface EffectsProps {
+  shadow?: BoxShadowType;
+  shadowColor?: BoxShadowColorType;
+  opacity?: OpacityType;
+  mixBlend?: MixBlendModeType;
+  bgBlend?: BackgroundBlendModeType;
+}
+// #endregion
+
+// #region [Components ClassNames]
+export const EffectsClassNames = (props: EffectsProps) => {
+  const { shadow, shadowColor, opacity, mixBlend, bgBlend } = props;
+  
+  return classNames(stringOrBooleanCls(shadow, 'shadow'), {
+    [`shadow-color-${shadowColor}`]: shadowColor,
+    [`opacity-${opacity}`]: opacity,
+    [`mix-blend-${mixBlend}`]: mixBlend,
+    [`bg-blend-${bgBlend}`]: bgBlend,
+  });
+};
+// #endregion
