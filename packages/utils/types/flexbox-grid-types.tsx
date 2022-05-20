@@ -1,3 +1,6 @@
+import classNames from 'classnames';
+
+// #region [Single Type]
 const sizes = [
   '0',
   '1',
@@ -61,7 +64,7 @@ const sizes = [
   '9/12',
   '10/12',
   '11/12',
-  'full'
+  'full',
 ] as const;
 
 export declare type FlexBasisType = typeof sizes[number];
@@ -71,6 +74,10 @@ export declare type FlexDirectionType = 'row' | 'row-reverse' | 'col' | 'col-rev
 export declare type FlexWrapType = 'wrap' | 'wrap-reverse' | 'nowrap';
 
 export declare type FlexType = '0' | 'auto' | 'initial' | 'none';
+
+export declare type FlexGrowType = boolean;
+
+export declare type FlexShrinkType = boolean;
 
 export declare type OrderType =
   | '1'
@@ -110,7 +117,7 @@ export declare type GridTemplateColumnsType =
   | '12'
   | 'none';
 
-export declare type GridColumnOrRowsAutoType = 'auto';
+export declare type GridColumnOrRowsAutoType = boolean;
 
 export declare type GridColumnSpanType =
   | '1'
@@ -188,7 +195,131 @@ const gapSizes = [
   '64',
   '72',
   '80',
-  '96'
+  '96',
 ] as const;
 
 export declare type GapType = typeof gapSizes[number];
+// #endregion
+
+// #region [Components Props]
+export interface FlexboxProps {
+  flexBasis?: FlexBasisType;
+  flexDirection?: FlexDirectionType;
+  flexWrap?: FlexWrapType;
+  flex?: FlexType;
+  flexGrow?: FlexGrowType;
+  flexShrink?: FlexShrinkType;
+}
+
+export interface GridProps {
+  gridCols?: GridTemplateColumnsType;
+  gridColAuto?: GridColumnOrRowsAutoType;
+  gridColSpan?: GridColumnSpanType;
+  gridColStart?: GridColumnStartOrEndType;
+  gridColEnd?: GridColumnStartOrEndType;
+  gridRows?: GridTemplateRowsType;
+  gridRowAuto?: GridColumnOrRowsAutoType;
+  gridRowSpan?: GridRowSpanType;
+  gridRowStart?: GridRowStartOrEndType;
+  gridRowEnd?: GridRowStartOrEndType;
+  gridAutoFlow?: GridAutoFlowType;
+  gridAutoCols?: GridAutoColumnsOrRowsType;
+  gridAutoRows?: GridAutoColumnsOrRowsType;
+}
+
+export interface FlexAndGridProps {
+  order?: OrderType;
+  gap?: GapType;
+  gapX?: GapType;
+  gapY?: GapType;
+  justifyContent?: JustifyOrAlignOrPlaceContentType;
+  justifyItems?: JustifyOrAlignOrPlaceItemsType;
+  justifySelf?: JustifyOrAlignOrPlaceSelfType;
+  alignContent?: JustifyOrAlignOrPlaceContentType;
+  alignItems?: JustifyOrAlignOrPlaceItemsType;
+  alignSelf?: JustifyOrAlignOrPlaceSelfType;
+  placeContent?: JustifyOrAlignOrPlaceContentType;
+  placeItems?: JustifyOrAlignOrPlaceItemsType;
+  placeSelf?: JustifyOrAlignOrPlaceSelfType;
+}
+// #endregion
+
+// #region [Components ClassNames]
+export const FlexboxClassNames = (props: FlexboxProps) => {
+  const { flexBasis, flexDirection, flexWrap, flex, flexGrow, flexShrink } = props;
+  return classNames({
+    [`basis-${flexBasis}`]: flexBasis,
+    [`flex-${flexDirection}`]: flexDirection,
+    [`flex-${flexWrap}`]: flexWrap,
+    [`flex-${flex}`]: flex,
+    [`grow-${flexGrow}`]: flexGrow,
+    [`shrink-${flexShrink}`]: flexShrink,
+  });
+};
+
+export const GridClassNames = (props: GridProps) => {
+  const {
+    gridCols,
+    gridColAuto,
+    gridColSpan,
+    gridColStart,
+    gridColEnd,
+    gridRows,
+    gridRowAuto,
+    gridRowSpan,
+    gridRowStart,
+    gridRowEnd,
+    gridAutoFlow,
+    gridAutoCols,
+    gridAutoRows,
+  } = props;
+  return classNames({
+    [`grid-cols-${gridCols}`]: gridCols,
+    [`gridColAuto-${gridColAuto}`]: gridColAuto,
+    [`col-span`]: gridColSpan,
+    [`col-start-${gridColStart}`]: gridColStart,
+    [`col-end-${gridColEnd}`]: gridColEnd,
+    [`grid-rows-${gridRows}`]: gridRows,
+    [`row-auto`]: gridRowAuto,
+    [`row-span-${gridRowSpan}`]: gridRowSpan,
+    [`row-start-${gridRowStart}`]: gridRowStart,
+    [`row-end-${gridRowEnd}`]: gridRowEnd,
+    [`grid-flow-${gridAutoFlow}`]: gridAutoFlow,
+    [`auto-cols-${gridAutoCols}`]: gridAutoCols,
+    [`auto-rows-${gridAutoRows}`]: gridAutoRows,
+  });
+};
+
+export const FlexAndGridClassNames = (props: FlexAndGridProps) => {
+  const {
+    order,
+    gap,
+    gapX,
+    gapY,
+    justifyContent,
+    justifyItems,
+    justifySelf,
+    alignContent,
+    alignItems,
+    alignSelf,
+    placeContent,
+    placeItems,
+    placeSelf,
+  } = props;
+  return classNames({
+    [`order-${order}`]: order,
+    [`gap-${gap}`]: gap,
+    [`gapX-${gapX}`]: gapX,
+    [`gapY-${gapY}`]: gapY,
+    [`justify-${justifyContent}`]: justifyContent,
+    [`justify-items-${justifyItems}`]: justifyItems,
+    [`justify-self-${justifySelf}`]: justifySelf,
+    [`content-${alignContent}`]: alignContent,
+    [`items-${alignItems}`]: alignItems,
+    [`self-${alignSelf}`]: alignSelf,
+    [`place-content-${placeContent}`]: placeContent,
+    [`place-items-${placeItems}`]: placeItems,
+    [`place-self-${placeSelf}`]: placeSelf,
+  });
+};
+// #endregion
