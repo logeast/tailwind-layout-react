@@ -1,3 +1,7 @@
+import classNames from 'classnames';
+import { booleanCls } from '../classes';
+
+// #region [Single Type]
 export declare type ScaleType = '0' | '50' | '75' | '90' | '95' | '100' | '105' | '110' | '125' | '150' | '200';
 
 export declare type RotateType = '0' | '1' | '2' | '3' | '6' | '12' | '45' | '90' | '180';
@@ -58,3 +62,35 @@ export declare type TransformOriginType =
   | 'bottom-left'
   | 'left'
   | 'top-left';
+// #endregion
+
+// #region [Components Props]
+export interface TransformsProps {
+  scale?: ScaleType;
+  scaleX?: ScaleType;
+  scaleY?: ScaleType;
+  rotate?: RotateType;
+  translateX?: TranslateType;
+  translateY?: TranslateType;
+  skewX?: SkewType;
+  skewY?: SkewType;
+  transformOrigin?: TransformOriginType;
+}
+// #endregion
+
+// #region [Components ClassNames]
+export const TransformsClassNames = (props: TransformsProps) => {
+  const { scale, scaleX, scaleY, rotate, translateX, translateY, skewX, skewY, transformOrigin } = props;
+  return classNames({
+    [`scale-${scale}`]: scale,
+    [`scale-x-${scale}`]: scaleX,
+    [`scale-y-${scale}`]: scaleY,
+    [`rotate-${rotate}`]: rotate,
+    [`translate-x-${translateX}`]: translateX,
+    [`translate-y-${translateY}`]: translateY,
+    [`skew-x-${skewX}`]: skewX,
+    [`skew-y-${skewY}`]: skewY,
+    [`origin-${transformOrigin}`]: transformOrigin,
+  });
+};
+// #endregion

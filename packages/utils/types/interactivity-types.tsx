@@ -1,5 +1,8 @@
 import { ColorType } from './colors-types';
+import classNames from 'classnames';
+import { stringOrBooleanCls } from '../classes';
 
+// #region [Single Type]
 export declare type AccentColorType = ColorType;
 
 export declare type AppearanceType = 'none';
@@ -112,3 +115,99 @@ export declare type TouchActionType =
 export declare type UserSelectType = 'none' | 'text' | 'all' | 'auto';
 
 export declare type WillChangeType = 'auto' | 'scroll' | 'contents' | 'transform';
+// #endregion
+
+// #region [Components Props]
+export interface InteractivityProps {
+  accentColor?: AccentColorType;
+  appearance?: AppearanceType;
+  cursor?: CursorType;
+  caret?: CaretType;
+  pointerEvents?: PointerEventsType;
+  resize?: ResizeType;
+  scrollBehavior?: ScrollBehaviorType;
+  scrollMargin?: ScrollMarginType;
+  scrollMX?: ScrollMarginType;
+  scrollMY?: ScrollMarginType;
+  scrollMT?: ScrollMarginType;
+  scrollMR?: ScrollMarginType;
+  scrollMB?: ScrollMarginType;
+  scrollML?: ScrollMarginType;
+  scrollPadding?: ScrollPaddingType;
+  scrollPX?: ScrollPaddingType;
+  scrollPY?: ScrollPaddingType;
+  scrollPT?: ScrollPaddingType;
+  scrollPR?: ScrollPaddingType;
+  scrollPB?: ScrollPaddingType;
+  scrollPL?: ScrollPaddingType;
+  scrollSnapAlign?: ScrollSnapAlignType;
+  scrollSnapStop?: ScrollSnapStopType;
+  scrollSnapType?: ScrollSnapTypeType;
+  touchAction?: TouchActionType;
+  userSelect?: UserSelectType;
+  willChange?: WillChangeType;
+}
+// #endregion
+
+// #region [Components ClassNames]
+export const InteractivityClassNames = (props: InteractivityProps) => {
+  const {
+    accentColor,
+    appearance,
+    cursor,
+    caret,
+    pointerEvents,
+    resize,
+    scrollBehavior,
+    scrollMargin,
+    scrollMX,
+    scrollMY,
+    scrollMT,
+    scrollMR,
+    scrollMB,
+    scrollML,
+    scrollPadding,
+    scrollPX,
+    scrollPY,
+    scrollPT,
+    scrollPR,
+    scrollPB,
+    scrollPL,
+    scrollSnapAlign,
+    scrollSnapStop,
+    scrollSnapType,
+    touchAction,
+    userSelect,
+    willChange,
+  } = props;
+
+  return classNames(stringOrBooleanCls(resize, 'resize'), {
+    [`accent-color-${accentColor}`]: accentColor,
+    [`appearance-${appearance}`]: appearance,
+    [`cursor-${cursor}`]: cursor,
+    [`caret-${caret}`]: caret,
+    [`pointer-events-${pointerEvents}`]: pointerEvents,
+    [`scroll-${scrollBehavior}`]: scrollBehavior,
+    [`scroll-m-${scrollMargin}`]: scrollMargin,
+    [`scroll-mx-${scrollMX}`]: scrollMX,
+    [`scroll-my-${scrollMY}`]: scrollMY,
+    [`scroll-mt-${scrollMT}`]: scrollMT,
+    [`scroll-mr-${scrollMR}`]: scrollMR,
+    [`scroll-mb-${scrollMB}`]: scrollMB,
+    [`scroll-ml-${scrollML}`]: scrollML,
+    [`scroll-padding-${scrollPadding}`]: scrollPadding,
+    [`scroll-px-${scrollPX}`]: scrollPX,
+    [`scroll-py-${scrollPY}`]: scrollPY,
+    [`scroll-pt-${scrollPT}`]: scrollPT,
+    [`scroll-pr-${scrollPR}`]: scrollPR,
+    [`scroll-pb-${scrollPB}`]: scrollPB,
+    [`scroll-pl-${scrollPL}`]: scrollPL,
+    [`snap-${scrollSnapAlign}`]: scrollSnapAlign,
+    [`snap-${scrollSnapStop}`]: scrollSnapStop,
+    [`snap-${scrollSnapType}`]: scrollSnapType,
+    [`touch-${touchAction}`]: touchAction,
+    [`select-${userSelect}`]: userSelect,
+    [`will-change-${willChange}`]: willChange,
+  });
+};
+// #endregion
