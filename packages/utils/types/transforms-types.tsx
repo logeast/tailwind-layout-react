@@ -1,5 +1,4 @@
 import classNames from 'classnames';
-import { booleanCls } from '../classes';
 
 // #region [Single Type]
 export declare type ScaleType = '0' | '50' | '75' | '90' | '95' | '100' | '105' | '110' | '125' | '150' | '200';
