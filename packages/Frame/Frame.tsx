@@ -19,6 +19,7 @@ const Frame = (props: FrameProps) => {
     children,
 
     as: Tag = 'div',
+    ...others
   } = props;
 
   const renderCls = classnames(
@@ -32,7 +33,7 @@ const Frame = (props: FrameProps) => {
   );
 
   return (
-    <Tag className={renderCls} style={style}>
+    <Tag className={renderCls} style={style} {...others}>
       {children}
     </Tag>
   );
