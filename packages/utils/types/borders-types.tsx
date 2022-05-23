@@ -62,7 +62,7 @@ export interface BordersProps {
 // #endregion
 
 // #region [Components ClassNames]
-export const bordersClassNames = (props: BordersProps) => {
+export const BordersClassNames = (props: BordersProps) => {
   const {
     rounded,
     borderWidth,

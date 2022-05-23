@@ -190,7 +190,7 @@ export interface LayoutProps {
 // #endregion
 
 // #region [Components ClassNames]
-export const layoutClassNames = (props: LayoutProps) => {
+export const LayoutClassNames = (props: LayoutProps) => {
   const {
     aspect,
     container,

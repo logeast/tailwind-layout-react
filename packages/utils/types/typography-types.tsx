@@ -173,7 +173,7 @@ export interface TypographyProps {
 // #endregion
 
 // #region [Components ClassNames]
-export const typographyClassNames = (props: TypographyProps) => {
+export const TypographyClassNames = (props: TypographyProps) => {
   const {
     fontFamily,
     fontSize,

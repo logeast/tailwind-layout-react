@@ -68,7 +68,7 @@ export interface SpacingProps {
 // #endregion
 
 // #region [Components ClassNames]
-export const spacingClassNames = (props: SpacingProps) => {
+export const SpacingClassNames = (props: SpacingProps) => {
   const { p, px, py, pt, pr, pb, pl, m, mx, my, mt, mr, mb, ml, spaceX, spaceY } = props;
 
   return classNames({

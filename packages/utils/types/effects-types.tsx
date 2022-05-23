@@ -75,7 +75,6 @@ export interface EffectsProps {
 // #region [Components ClassNames]
 export const EffectsClassNames = (props: EffectsProps) => {
   const { shadow, shadowColor, opacity, mixBlend, bgBlend } = props;
-  
   return classNames(stringOrBooleanCls(shadow, 'shadow'), {
     [`shadow-color-${shadowColor}`]: shadowColor,
     [`opacity-${opacity}`]: opacity,

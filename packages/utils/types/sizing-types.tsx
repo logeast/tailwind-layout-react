@@ -119,7 +119,7 @@ export interface SizingProps {
 // #endregion
 
 // #region [Components ClassNames]
-export const sizingClassNames = (props: SizingProps) => {
+export const SizingClassNames = (props: SizingProps) => {
   const { w, minW, maxW, h, minH, maxH } = props;
   return classNames({
     [`w-${w}`]: w,

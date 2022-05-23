@@ -3,12 +3,22 @@ import classnames from 'classnames';
 
 import { FrameProps } from './types';
 import {
-  backgroundsClassNames,
-  bordersClassNames,
-  layoutClassNames,
-  sizingClassNames,
-  spacingClassNames,
-  typographyClassNames,
+  AccessibilityClassNames,
+  BackgroundsClassNames,
+  BordersClassNames,
+  EffectsClassNames,
+  FiltersClassNames,
+  FlexAndGridClassNames,
+  FlexboxClassNames,
+  GridClassNames,
+  InteractivityClassNames,
+  LayoutClassNames,
+  SizingClassNames,
+  SpacingClassNames,
+  SVGClassNames,
+  TableClassNames,
+  TransitionsAndAnimationClassNames,
+  TypographyClassNames,
 } from '../utils/types';
 
 const Frame = (props: FrameProps) => {
@@ -23,12 +33,22 @@ const Frame = (props: FrameProps) => {
   } = props;
 
   const renderCls = classnames(
-    layoutClassNames(props),
-    spacingClassNames(props),
-    sizingClassNames(props),
-    typographyClassNames(props),
-    backgroundsClassNames(props),
-    bordersClassNames(props),
+    LayoutClassNames(props),
+    FlexboxClassNames(props),
+    GridClassNames(props),
+    FlexAndGridClassNames(props),
+    SpacingClassNames(props),
+    SizingClassNames(props),
+    TypographyClassNames(props),
+    BackgroundsClassNames(props),
+    BordersClassNames(props),
+    EffectsClassNames(props),
+    FiltersClassNames(props),
+    TransitionsAndAnimationClassNames(props),
+    InteractivityClassNames(props),
+    SVGClassNames(props),
+    TableClassNames(props),
+    AccessibilityClassNames(props),
     className
   );
 

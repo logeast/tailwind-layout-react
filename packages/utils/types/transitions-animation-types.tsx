@@ -14,7 +14,7 @@ export declare type AnimationType = 'none' | 'ping' | 'pulse' | 'bounce';
 // #endregion
 
 // #region [Components Props]
-export interface TransformsProps {
+export interface TransitionsAndAnimationProps {
   transitionProperty?: TransitionPropertyType;
   transitionDuration?: TransitionDurationType;
   transitionTimingFunction?: TransitionTimingFunctionType;
@@ -24,7 +24,7 @@ export interface TransformsProps {
 // #endregion
 
 // #region [Components ClassNames]
-export const TransformsClassNames = (props: TransformsProps) => {
+export const TransitionsAndAnimationClassNames = (props: TransitionsAndAnimationProps) => {
   const { transitionProperty, transitionDuration, transitionTimingFunction, transitionDelay, animation } = props;
 
   return classNames(stringOrBooleanCls(transitionProperty, 'transition'), {

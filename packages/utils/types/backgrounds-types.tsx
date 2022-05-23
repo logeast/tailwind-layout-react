@@ -53,7 +53,7 @@ export interface BackgroundsProps {
 // #endregion
 
 // #region [Components ClassNames]
-export const backgroundsClassNames = (props: BackgroundsProps) => {
+export const BackgroundsClassNames = (props: BackgroundsProps) => {
   const {
     bgAttachment,
     bgClip,

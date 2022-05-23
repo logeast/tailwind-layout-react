@@ -67,7 +67,7 @@ export declare type BackdropSepiaType = boolean;
 // #endregion
 
 // #region [Components Props]
-export interface EffectsProps {
+export interface FiltersProps {
   blur?: BlurType;
   brightness?: BrightnessType;
   contrast?: ContrastType;
@@ -90,7 +90,7 @@ export interface EffectsProps {
 // #endregion
 
 // #region [Components ClassNames]
-export const EffectsClassNames = (props: EffectsProps) => {
+export const FiltersClassNames = (props: FiltersProps) => {
   const {
     blur,
     brightness,
