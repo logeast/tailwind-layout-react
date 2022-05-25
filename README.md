@@ -6,6 +6,8 @@ Use React to layout easier with [tailwindcss](https://tailwindcss.com/).
 
 ## Document
 
+📩 Please recommend your favorite component library documentation generation tool to me.
+
 waiting...
 
 ## Contributing
