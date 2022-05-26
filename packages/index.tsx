@@ -1,4 +1,5 @@
 import Frame, { FrameProps } from './Frame';
+import Text, { TextProps } from './Text';
 
-export { Frame };
-export type { FrameProps };
+export { Frame, Text };
+export type { FrameProps, TextProps };
