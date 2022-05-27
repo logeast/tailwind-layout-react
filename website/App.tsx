@@ -4,7 +4,7 @@ import { Frame } from '../packages';
 function App() {
   return (
     <div className="App">
-      <Frame as="h1" className="custom-classname" w="full" isolate="auto" inset="40">
+      <Frame as="h1" className="custom-class" w="full" isolate="auto" inset="40">
         Frame layout
       </Frame>
     </div>
