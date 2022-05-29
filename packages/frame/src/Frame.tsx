@@ -19,7 +19,7 @@ import {
   TableClassNames,
   TransitionsAndAnimationClassNames,
   TypographyClassNames,
-} from '../utils/types';
+} from '../../utils/types';
 
 const Frame = (props: FrameProps) => {
   const {

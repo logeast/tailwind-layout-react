@@ -1,5 +1,5 @@
 import React from 'react';
-import { BaseProps } from '../utils/props';
+import { BaseProps } from '../../utils/props';
 import {
   AccessibilityProps,
   BackgroundsProps,
@@ -17,7 +17,7 @@ import {
   TableProps,
   TransitionsAndAnimationProps,
   TypographyProps,
-} from '../utils/types';
+} from '../../utils/types';
 
 export type FrameUnionProps = BaseProps &
   LayoutProps &
