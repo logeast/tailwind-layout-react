@@ -1,7 +1,5 @@
 import * as React from 'react';
 import classnames from 'classnames';
-
-import { FrameProps } from './types';
 import {
   AccessibilityClassNames,
   BackgroundsClassNames,
@@ -19,7 +17,9 @@ import {
   TableClassNames,
   TransitionsAndAnimationClassNames,
   TypographyClassNames,
-} from '../../utils/types';
+} from '@tailwind-layout-react/utils';
+
+import { FrameProps } from './types';
 
 const Frame = (props: FrameProps) => {
   const {

@@ -1,4 +1,4 @@
-# @tailwind-layout-react/frame
+# @tailwind-layout-react/utils
 
 The Frame component of tailwind-layout-react.
 

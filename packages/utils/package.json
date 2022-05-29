@@ -1,5 +1,5 @@
 {
-  "name": "@tailwind-layout-react/frame",
+  "name": "@tailwind-layout-react/utils",
   "version": "1.0.0",
   "description": "",
   "type": "module",
@@ -21,8 +21,5 @@
     "react",
     "ui",
     "layout"
-  ],
-  "dependencies": {
-    "@tailwind-layout-react/utils": "workspace:*"
-  }
+  ]
 }

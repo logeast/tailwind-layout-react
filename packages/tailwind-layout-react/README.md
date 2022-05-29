@@ -1,6 +1,6 @@
-# @tailwind-layout-react/frame
+# @tailwind-layout-react/text
 
-The Frame component of tailwind-layout-react.
+The Text component of tailwind-layout-react.
 
 # Official Documentation
 

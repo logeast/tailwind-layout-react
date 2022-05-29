@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Frame } from '../packages';
+import { Frame } from '../packages/tailwind-layout-react/src';
 
 function App() {
   return (

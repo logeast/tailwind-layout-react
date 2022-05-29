@@ -1,23 +1,95 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-const path = require('path');
+/**
+ * This file from:
+ * https://github.com/Saul-Mirone/milkdown/blob/main/vite.config.ts
+ */
+import path = require('path');
+import { Plugin } from 'rollup';
+import autoExternal from 'rollup-plugin-auto-external';
+import { BuildOptions, UserConfig as ViteUserConfig } from 'vite';
+import { defineConfig } from 'vite';
+import { UserConfig } from 'vitest';
+import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  build: {
-    lib: {
-      entry: path.resolve(__dirname, 'packages/index.tsx'),
-      name: 'tailwind-layout-react',
-      fileName: format => `tailwind-layout-react.${format}.js`
-    },
-    rollupOptions: {
-      external: ['react', 'autoprefixer', 'postcss', 'tailwindcss'],
-      output: {
-        globals: {
-          react: 'React'
-        }
+export const libFileName = (format: string) => `index.${format}.js`;
+
+export const rollupPlugins: Plugin[] = [autoExternal()];
+
+const resolvePath = (str: string) => path.resolve(__dirname, str);
+
+function isObject(item: unknown): item is Record<string, unknown> {
+  return Boolean(item && typeof item === 'object' && !Array.isArray(item));
+}
+
+function mergeDeep<T>(target: T, ...sources: T[]): T {
+  if (!sources.length) return target;
+  const source = sources.shift();
+
+  if (isObject(target) && isObject(source)) {
+    for (const key in source) {
+      if (isObject(source[key])) {
+        if (!target[key]) Object.assign(target, { [key]: {} });
+        mergeDeep(target[key] as T, source[key] as T);
+      } else {
+        Object.assign(target, { [key]: source[key] });
       }
     }
   }
-});
+
+  return mergeDeep(target, ...sources);
+}
+
+const globalName = 'tailwind-layout-react';
+
+export const external = [
+  'react',
+  'react-dom',
+  'tailwindcss',
+  'tailwind-layout-react',
+  '@tailwind-layout-react/utils',
+  '@tailwind-layout-react/frame',
+  '@tailwind-layout-react/text',
+];
+
+export const viteBuild = (packageDirName: string, options: BuildOptions = {}): BuildOptions =>
+  mergeDeep<BuildOptions>(
+    {
+      sourcemap: true,
+      lib: {
+        entry: resolvePath(`packages/${packageDirName}/src/index.ts`),
+        name: packageDirName === globalName ? globalName : `${globalName}_${packageDirName}`,
+        fileName: libFileName,
+        formats: ['es'],
+      },
+      rollupOptions: {
+        external,
+        output: {
+          dir: resolvePath(`packages/${packageDirName}/lib`),
+        },
+        plugins: rollupPlugins,
+      },
+    },
+    options,
+  );
+
+/**
+ * Config for plugins
+ *
+ * @param packageDirName - package directory name
+ * @param options - custom options
+ * @returns user config
+ */
+export const pluginViteConfig = (packageDirName: string, options: ViteUserConfig = {}) => {
+  const vitePlugins = [react(), ...options.plugins];
+  return defineConfig({
+    ...options,
+    build: viteBuild(packageDirName, options.build),
+    plugins: vitePlugins,
+  });
+};
+
+export default defineConfig({
+  test: {
+    include: ['packages/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+    environment: 'jsdom',
+  },
+} as UserConfig);

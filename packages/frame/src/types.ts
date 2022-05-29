@@ -1,6 +1,6 @@
-import React from 'react';
-import { BaseProps } from '../../utils/props';
+import * as React from 'react';
 import {
+  BaseProps,
   AccessibilityProps,
   BackgroundsProps,
   BordersProps,
@@ -17,7 +17,7 @@ import {
   TableProps,
   TransitionsAndAnimationProps,
   TypographyProps,
-} from '../../utils/types';
+} from 'tailwind-layout-react/utils';
 
 export type FrameUnionProps = BaseProps &
   LayoutProps &

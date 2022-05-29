@@ -1,4 +1,4 @@
-import { BaseProps } from '../utils/props';
+import { BaseProps } from '../utils/src/base-props';
 import {
   AccessibilityProps,
   BackgroundsProps,
