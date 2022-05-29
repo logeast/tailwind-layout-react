@@ -11,9 +11,6 @@
   "scripts": {
     "postinstall": "husky install",
     "format": "lint-staged",
-    "dev": "vite --port 8848",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
     "watch": "pnpm --filter=./packages --parallel run start",
     "doc": "pnpm --filter=@tailwind-layout-react/gh-pages run dev",
     "start": "concurrently -n watch,doc \"pnpm watch\" \"pnpm doc\"",

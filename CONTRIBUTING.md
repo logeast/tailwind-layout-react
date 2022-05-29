@@ -3,7 +3,7 @@
 > We use pnpm for development.
 > Please make sure you have node.js, npm and pnpm installed on your machine.
 
-After cloning Milkdown, run `pnpm install` to install dependencies.
+After cloning tailwind-layout-react, run `pnpm install` to install dependencies.
 
 To get started:
 
@@ -15,9 +15,9 @@ To get started:
 
 After that,
 you may want to play with any packages,
-You can watch them through `pnpm --filter=@milkdown/xxx start`.
+You can watch them through `pnpm --filter=@tailwind-layout-react/xxx start`.
 
-For example, `pnpm --filter=@milkdown/core start`.
+For example, `pnpm --filter=@tailwind-layout-react/frame start`.
 
 # Commands
 
