@@ -18,7 +18,6 @@ const Text = (props: TextProps) => {
     children,
 
     as: Tag = 'span',
-    ...others
   } = props;
 
   const renderCls = classnames(
@@ -32,7 +31,7 @@ const Text = (props: TextProps) => {
   );
 
   return (
-    <Tag className={renderCls} style={style} {...others}>
+    <Tag className={renderCls} style={style}>
       {children}
     </Tag>
   );

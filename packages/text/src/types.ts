@@ -1,12 +1,12 @@
-import { BaseProps } from '../utils/src/base-props';
 import {
+  BaseProps,
   AccessibilityProps,
   BackgroundsProps,
   BordersProps,
   SizingProps,
   SpacingProps,
   TypographyProps,
-} from '../utils/types';
+} from '@tailwind-layout-react/utils';
 
 export type TextUnionProps = BaseProps &
   SpacingProps &
@@ -34,5 +34,5 @@ export interface TextProps extends TextUnionProps {
     | 'span'
     | 'strong'
     | 'sub'
-    | 'sup'
+    | 'sup';
 }

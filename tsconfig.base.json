@@ -5,6 +5,8 @@
       "lib": ["dom", "es2017", "es2018", "es2019"],
       "noEmitOnError": true,
 
+      "jsx": "react",
+
       "declaration": true,
       "declarationMap": true,
       "sourceMap": true,

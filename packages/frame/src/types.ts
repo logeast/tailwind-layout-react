@@ -17,7 +17,7 @@ import {
   TableProps,
   TransitionsAndAnimationProps,
   TypographyProps,
-} from 'tailwind-layout-react/utils';
+} from '@tailwind-layout-react/utils';
 
 export type FrameUnionProps = BaseProps &
   LayoutProps &
