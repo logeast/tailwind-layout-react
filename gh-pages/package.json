@@ -1,14 +1,14 @@
 {
-  "name": "wets",
-  "version": "0.0.1",
+  "name": "@tailwind-layout-react/gh-pages",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "type-check": "tsc",
-    "dev": "next dev",
+    "dev": "PORT=8848 next dev",
     "deploy": "vercel --prod",
     "build": "next build",
     "postbuild": "next-sitemap",
-    "start": "next start"
+    "start": "PORT=8848 next start"
   },
   "dependencies": {
     "@headlessui/react": "1.4.0",
