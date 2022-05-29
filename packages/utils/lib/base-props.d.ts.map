@@ -1,0 +1,1 @@
+{"version":3,"file":"base-props.d.ts","sourceRoot":"","sources":["../src/base-props.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,KAAK,MAAM,OAAO,CAAC;AAE/B,MAAM,WAAW,SAAS;IACxB,SAAS,CAAC,EAAE,MAAM,CAAC;IACnB,KAAK,CAAC,EAAE,KAAK,CAAC,aAAa,CAAC;IAC5B,QAAQ,CAAC,EAAE,KAAK,CAAC,SAAS,CAAC;CAC5B"}

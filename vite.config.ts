@@ -2,7 +2,8 @@
  * This file from:
  * https://github.com/Saul-Mirone/milkdown/blob/main/vite.config.ts
  */
-import path = require('path');
+
+import path from 'path';
 import { Plugin } from 'rollup';
 import autoExternal from 'rollup-plugin-auto-external';
 import { BuildOptions, UserConfig as ViteUserConfig } from 'vite';
@@ -79,7 +80,7 @@ export const viteBuild = (packageDirName: string, options: BuildOptions = {}): B
  * @returns user config
  */
 export const pluginViteConfig = (packageDirName: string, options: ViteUserConfig = {}) => {
-  const vitePlugins = [react(), ...options.plugins];
+  const vitePlugins = options.plugins ?? [react()];
   return defineConfig({
     ...options,
     build: viteBuild(packageDirName, options.build),

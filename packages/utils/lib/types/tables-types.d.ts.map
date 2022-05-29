@@ -1,0 +1,1 @@
+{"version":3,"file":"tables-types.d.ts","sourceRoot":"","sources":["../../src/types/tables-types.ts"],"names":[],"mappings":"AAGA,MAAM,CAAC,OAAO,MAAM,kBAAkB,GAAG,UAAU,GAAG,UAAU,CAAC;AAEjE,MAAM,CAAC,OAAO,MAAM,eAAe,GAAG,MAAM,GAAG,OAAO,CAAC;AAIvD,MAAM,WAAW,UAAU;IACzB,cAAc,CAAC,EAAE,kBAAkB,CAAC;IACpC,WAAW,CAAC,EAAE,eAAe,CAAC;CAC/B;AAID,eAAO,MAAM,eAAe,UAAW,UAAU,WAMhD,CAAC"}

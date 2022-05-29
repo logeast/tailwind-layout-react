@@ -16,23 +16,32 @@
     "preview": "vite preview",
     "watch": "pnpm --filter=./packages --parallel run start",
     "doc": "pnpm --filter=@tailwind-layout-react/gh-pages run dev",
+    "start": "concurrently -n watch,doc \"pnpm watch\" \"pnpm doc\"",
     "test": "pnpm test:lint && pnpm test:unit",
     "test:unit": "vitest",
     "test:lint": "eslint \"**/{src}/**/*.{js,ts,tsx}\"",
+    "build:packs": "pnpm --filter=@tailwind-layout-react/* run build",
     "build:doc": "pnpm --filter=@tailwind-layout-react/gh-pages run build",
+    "build:cache": "nx run-many --target=build --all --parallel",
+    "build:affected": "nx affected --target=build",
+    "graph": "nx dep-graph",
+    "clear": "rimraf 'packages/*/{lib,tsconfig.tsbuildinfo,node_modules,.rollup.cache}' && rimraf node_modules && rimraf '/*/.next'",
     "changeset": "changeset",
-    "ci:version": "changeset version",
-    "ci:publish": "changeset publish",
-    "clear": "rimraf 'packages/*/{lib,tsconfig.tsbuildinfo,node_modules,.rollup.cache}' && rimraf node_modules",
+    "release": "changeset publish",
     "commit": "git-cz"
   },
   "devDependencies": {
     "@changesets/cli": "^2.22.0",
     "@commitlint/cli": "^17.0.1",
     "@commitlint/config-conventional": "^17.0.0",
+    "@nrwl/cli": "latest",
+    "@nrwl/nx-cloud": "latest",
+    "@nrwl/tao": "latest",
+    "@nrwl/workspace": "latest",
     "@types/node": "^17.0.36",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.5",
+    "@types/rollup-plugin-auto-external": "^2.0.2",
     "@typescript-eslint/eslint-plugin": "^5.26.0",
     "@typescript-eslint/parser": "^5.26.0",
     "@vitejs/plugin-react": "^1.3.2",
@@ -52,6 +61,7 @@
     "git-cz": "^4.9.0",
     "husky": "^8.0.1",
     "lint-staged": "^12.4.2",
+    "nx": "14.1.9",
     "postcss": "^8.4.14",
     "prettier": "^2.6.2",
     "react": "^18.1.0",
@@ -62,34 +72,6 @@
     "tailwindcss": "^3.0.24",
     "typescript": "^4.7.2",
     "vite": "^2.9.9",
-    "vitest": "^0.13.0",
-    "nx": "14.1.9",
-    "@nrwl/cli": "latest",
-    "@nrwl/tao": "latest",
-    "@nrwl/workspace": "latest",
-    "@nrwl/nx-cloud": "latest"
-  },
-  "files": [
-    "dist",
-    "packages"
-  ],
-  "main": "./dist/tailwind-layout-react.umd.js",
-  "module": "./dist/tailwind-layout-react.es.js",
-  "exports": {
-    ".": {
-      "import": "./dist/tailwind-layout-react.es.js",
-      "require": "./dist/tailwind-layout-react.umd.js"
-    }
-  },
-  "keywords": [
-    "tailwindcss",
-    "react",
-    "ui",
-    "layout"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/logeast/tailwind-layout-react"
-  },
-  "homepage": "https://github.com/logeast/tailwind-layout-react"
+    "vitest": "^0.13.0"
+  }
 }

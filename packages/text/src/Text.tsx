@@ -1,6 +1,4 @@
 import classnames from 'classnames';
-
-import { TextProps } from './types';
 import {
   AccessibilityClassNames,
   BackgroundsClassNames,
@@ -8,7 +6,9 @@ import {
   SizingClassNames,
   SpacingClassNames,
   TypographyClassNames,
-} from '../utils/types';
+} from '@tailwind-layout-react/utils';
+
+import { TextProps } from './types';
 
 const Text = (props: TextProps) => {
   const {
@@ -28,7 +28,7 @@ const Text = (props: TextProps) => {
     BackgroundsClassNames(props),
     BordersClassNames(props),
     AccessibilityClassNames(props),
-    className
+    className,
   );
 
   return (
