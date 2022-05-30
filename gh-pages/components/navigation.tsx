@@ -4,8 +4,10 @@ import {
   BeakerIcon,
   ColorSwatchIcon
 } from "@heroicons/react/outline";
-import { Button, Icon, cx } from "@vechaiui/react";
+import { Icon } from '@vechaiui/icon';
+import { Button } from '@vechaiui/button';
 import * as React from "react";
+import classNames from "classnames";
 
 import { Github, Twitter } from "@libs/react-feather";
 
@@ -56,7 +58,7 @@ export function Navigation() {
     <nav ref={navRef}>
       <Transition.Root show={open} as={React.Fragment}>
         <div
-          className={cx(
+          className={classNames(
             "fixed inset-y-0 left-0 z-30 w-64 px-3 py-5 lg:block text-neutral-400 bg-neutral-900 lg:static h-full"
           )}
           aria-labelledby="slide-over-title"
@@ -108,7 +110,7 @@ export function Navigation() {
                     </Button>
                   </a>
                   <a
-                    href="https://twitter.com/vechaiui"
+                    href="https://twitter.com/logeast4"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -133,10 +135,10 @@ export function Navigation() {
                       <NavLink key={idx} passHref href={link.path}>
                         {(active: boolean) => (
                           <a
-                            className={cx(
+                            className={classNames(
                               "relative flex items-center w-full px-2 py-1.5 transition-colors duration-150 ease-in-out font-medium bg-transparent border-0 rounded cursor-base text-sm",
                               active
-                                ? cx(
+                                ? classNames(
                                     "bg-primary-200 text-primary-200",
                                     "bg-opacity-15"
                                   )
@@ -167,7 +169,7 @@ export function Navigation() {
                         <NavLink key={c.key} href={`/${c.key}`} passHref>
                           {(active: boolean) => (
                             <a
-                              className={cx(
+                              className={classNames(
                                 "relative flex items-center w-full px-2 py-1 bg-transparent border-0 rounded cursor-base text-sm",
                                 active ? "text-primary-500" : "hover:text-white"
                               )}

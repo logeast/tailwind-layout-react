@@ -1,5 +1,6 @@
-import { cx, IconButton } from "@vechaiui/react";
+import { IconButton } from "@vechaiui/button";
 import * as React from "react";
+import classNames from "classnames";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
@@ -38,12 +39,12 @@ export default function Layout({ children }: { children: React.ReactElement }) {
       <Navigation />
       <div className="relative left-0 flex-1 p-0 overflow-auto lg:py-6 lg:pr-6 xl:overflow-hidden">
         <div
-          className={cx(
+          className={classNames(
             "h-full rounded-none bg-base lg:rounded max-w-screen-2xl",
             isMainNavigation && "overflow-auto"
           )}
         >
-          <div className={cx(classes, "overflow-auto")}>{children}</div>
+          <div className={classNames(classes, "overflow-auto")}>{children}</div>
         </div>
       </div>
     </div>

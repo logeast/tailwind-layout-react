@@ -1,7 +1,6 @@
 import * as Tabs from "@radix-ui/react-tabs";
-import { Link } from "@vechaiui/react";
 import * as React from "react";
-import NextLink from "next/link";
+import Link from "next/link";
 
 import { IDE } from "./ide";
 import { CodeBlock } from "./code-block";
@@ -114,7 +113,7 @@ export default function DocumentBuilder({ component }: DocumentBuilderProps) {
                         if (prop.extend) {
                           return (
                             <li className="mt-4">
-                              <Link as={NextLink} href={prop.path}>
+                              <Link href={prop.path}>
                                 {prop.label}
                               </Link>
                             </li>

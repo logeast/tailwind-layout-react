@@ -22,5 +22,6 @@ module.exports = withPlugins(
       return config;
     },
     reactStrictMode: true,
+    swcMinify: true,
   }
 );

@@ -1,7 +1,8 @@
-import { Icon, cx } from "@vechaiui/react";
+import * as React from "react";
+import {Icon} from "@vechaiui/icon";
+import classNames from "classnames";
 import { ChevronUpIcon } from "@heroicons/react/outline";
 import * as Tabs from "@radix-ui/react-tabs";
-import * as React from "react";
 import { LiveProvider, LiveContext, LiveError } from "react-live";
 
 import { Code } from "./code";
@@ -74,7 +75,7 @@ function Editor({
         <Tabs.Root
           value={tabKey}
           onValueChange={handleTabsChange}
-          className={cx("relative", !openEditor ? "rounded-b-lg" : "")}
+          className={classNames("relative", !openEditor ? "rounded-b-lg" : "")}
         >
           <Tabs.List
             onClick={(e) => {
@@ -83,7 +84,7 @@ function Editor({
               }
             }}
             tabIndex={0}
-            className={cx(
+            className={classNames(
               "relative flex items-center border-b rounded-tr-lg hide-scroll border-neutral-700",
               !openEditor ? "rounded-b-lg" : ""
             )}
@@ -92,7 +93,7 @@ function Editor({
               <Tabs.Trigger
                 key={file.name}
                 value={file.name}
-                className={cx(
+                className={classNames(
                   "text-smm h-full cursor-base flex items-center -mb-px justify-center px-5 py-3 border-b-2 border-transparent font-medium text-neutral-300 !my-0",
                   !openEditor ? "rounded-b-lg" : "selected:border-primary-500"
                 )}
@@ -103,7 +104,7 @@ function Editor({
 
             <span
               role="tablist"
-              className={cx(
+              className={classNames(
                 "w-5 h-5 absolute right-2.5 top-2.5 rounded-full flex justify-center items-center text-primary-600",
                 openEditor ? "bg-primary-200 bg-opacity-15" : "bg-transparent"
               )}
@@ -112,7 +113,7 @@ function Editor({
                 role="tablist"
                 as={ChevronUpIcon}
                 label="chevron-up"
-                className={cx(
+                className={classNames(
                   "w-4 h-4",
                   openEditor ? "transform rotate-180" : ""
                 )}

@@ -1,5 +1,6 @@
 import { DuplicateIcon, CheckIcon } from "@heroicons/react/outline";
-import { IconButton, Icon, IconButtonProps } from "@vechaiui/react";
+import { Icon } from "@vechaiui/icon";
+import { IconButton, IconButtonProps } from "@vechaiui/button";
 import * as React from "react";
 import useClipboard from "react-use-clipboard";
 
