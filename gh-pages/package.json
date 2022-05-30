@@ -36,7 +36,7 @@
     "react-live": "^2.2.3",
     "react-use-clipboard": "^1.0.7",
     "shiki": "^0.9.7",
-    "tailwind-layout-react": "^0.0.10"
+    "tailwind-layout-react": "workspace:*"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.3.3",
