@@ -1,6 +1,6 @@
-# @tailwind-layout-react/text
+# tailwind-layout-react
 
-The Text component of tailwind-layout-react.
+The full package of tailwind-layout-react.
 
 # Official Documentation
 

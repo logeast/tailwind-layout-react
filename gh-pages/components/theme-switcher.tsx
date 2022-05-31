@@ -29,7 +29,7 @@ export function ThemSwitcher() {
                   alt="logo"
                 />
               </span>
-              <span className="font-semibold text-neutral-100">VechaiUI</span>
+              <span className="font-semibold text-neutral-100">Tailwind Layout React</span>
             </div>
             <div className="text-lg text-neutral-100">
               <svg

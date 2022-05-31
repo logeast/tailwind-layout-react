@@ -32,7 +32,8 @@
     "react-hook-form": "^7.12.2",
     "react-live": "^2.4.1",
     "react-use-clipboard": "^1.0.7",
-    "shiki": "0.9.7"
+    "shiki": "0.9.7",
+    "tailwind-layout-react": "workspace:*"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.3.3",

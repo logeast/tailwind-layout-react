@@ -122,6 +122,7 @@ importers:
       react-live: ^2.4.1
       react-use-clipboard: ^1.0.7
       shiki: 0.9.7
+      tailwind-layout-react: workspace:*
       tailwindcss: ^2.2.4
       typescript: 4.3.2
     dependencies:
@@ -147,6 +148,7 @@ importers:
       react-live: 2.4.1_sfoxds7t5ydpegc3knd667wn6m
       react-use-clipboard: 1.0.8_sfoxds7t5ydpegc3knd667wn6m
       shiki: 0.9.7
+      tailwind-layout-react: link:../packages/tailwind-layout-react
     devDependencies:
       '@tailwindcss/forms': 0.3.4_tailwindcss@2.2.19
       '@tailwindcss/typography': 0.4.1_tailwindcss@2.2.19
