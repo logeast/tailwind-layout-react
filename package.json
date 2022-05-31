@@ -1,13 +1,12 @@
 {
   "name": "tailwind-layout-react",
-  "version": "0.0.10",
+  "version": "0.0.0",
   "license": "MIT",
   "private": true,
   "engines": {
     "node": ">=12",
     "pnpm": ">=7"
   },
-  "type": "module",
   "scripts": {
     "postinstall": "husky install",
     "format": "lint-staged",
