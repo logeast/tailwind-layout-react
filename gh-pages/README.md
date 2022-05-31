@@ -1,3 +1,3 @@
-# Tailwind Layout React Site
+# Vechai UI Docs
 
-Documentation site of Tailwind Layout React.
+The Documentation website for vechaiui.dev

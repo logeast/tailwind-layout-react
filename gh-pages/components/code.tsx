@@ -1,5 +1,5 @@
+import { cx } from "@vechaiui/react";
 import * as React from "react";
-import classNames from 'classnames';
 
 import Editor from "@libs/react-codex";
 import { Highlight } from "./highlight";
@@ -10,7 +10,7 @@ export function Code({ className, ...rest }: any) {
       tabSize={2}
       highlight={(props: any) => <Highlight {...props} />}
       language="tsx"
-      className={classNames(
+      className={cx(
         "font-mono dark group text-sm leading-6 overflow-hidden",
         className
       )}

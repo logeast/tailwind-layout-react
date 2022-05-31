@@ -15,6 +15,7 @@ dist-ssr
 *.local
 .next
 gh-pages/.next
+gh-pages-1
 
 # Editor directories and files
 .vscode/*

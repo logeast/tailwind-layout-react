@@ -11,32 +11,28 @@
     "start": "PORT=8848 next start"
   },
   "dependencies": {
-    "@headlessui/react": "^1.6.4",
-    "@heroicons/react": "^1.0.6",
+    "@headlessui/react": "1.4.0",
+    "@heroicons/react": "^1.0.1",
     "@mdx-js/loader": "^1.6.22",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
-    "@next/mdx": "^12.1.6",
+    "@next/mdx": "^11.0.1",
     "@radix-ui/react-context-menu": "^0.0.23",
     "@radix-ui/react-id": "^0.0.6",
     "@radix-ui/react-popover": "^0.0.19",
     "@radix-ui/react-slider": "^0.0.16",
     "@radix-ui/react-tabs": "^0.0.15",
     "@radix-ui/react-tooltip": "^0.0.20",
-    "@vechaiui/button": "^0.2.2",
     "@vechaiui/core": "^0.6.0",
-    "@vechaiui/icon": "^0.2.1",
-    "@vechaiui/react": "^0.2.2",
-    "classnames": "^2.3.1",
-    "next": "^12.1.6",
+    "@vechaiui/react": "0.2.2",
+    "next": "11.1.0",
     "next-seo": "^4.26.0",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "react-hook-form": "^7.12.2",
-    "react-live": "^2.2.3",
+    "react-live": "^2.4.1",
     "react-use-clipboard": "^1.0.7",
-    "shiki": "^0.9.7",
-    "tailwind-layout-react": "workspace:*"
+    "shiki": "0.9.7"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.3.3",
@@ -48,6 +44,6 @@
     "next-sitemap": "^1.6.124",
     "postcss": "^8.3.4",
     "tailwindcss": "^2.2.4",
-    "typescript": "^4.3.2"
+    "typescript": "4.3.2"
   }
 }

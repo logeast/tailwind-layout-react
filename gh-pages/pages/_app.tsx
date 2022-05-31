@@ -1,3 +1,4 @@
+// @ts-nocheck
 import "../styles/globals.css";
 // import "@vechaiui/core/dist/vechaiui.css";
 import * as React from "react";

@@ -1,4 +1,4 @@
-const baseUrl = "https://github.com/logeast/wets";
+const baseUrl = "https://github.com/vechai/vechaiui";
 
 const siteConfig = {
   repo: {
@@ -13,8 +13,8 @@ const siteConfig = {
       "Collection of Accessible React UI Components using TailwindCSS.",
     siteUrl: "https://vechaiui.com",
     twitter: {
-      handle: "@logeast4",
-      site: "@logeast4",
+      handle: "@vechaiui",
+      site: "@vechaiui",
       cardType: "summary_large_image",
     },
     openGraph: {
