@@ -1,5 +1,5 @@
 {
-  "name": "@tailwind-layout-react/text",
+  "name": "@tailwind-layout-react/flex",
   "version": "1.0.0",
   "description": "",
   "type": "module",
@@ -26,6 +26,7 @@
     "frame"
   ],
   "dependencies": {
-    "@tailwind-layout-react/utils": "workspace:*"
+    "@tailwind-layout-react/utils": "workspace:*",
+    "@tailwind-layout-react/frame": "workspace:*"
   }
 }

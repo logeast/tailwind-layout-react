@@ -20,6 +20,9 @@
     "tailwindcss",
     "react",
     "ui",
-    "layout"
+    "layout",
+    "flex",
+    "grid",
+    "frame"
   ]
 }

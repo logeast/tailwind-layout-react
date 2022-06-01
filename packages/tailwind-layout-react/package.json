@@ -20,7 +20,10 @@
     "tailwindcss",
     "react",
     "ui",
-    "layout"
+    "layout",
+    "flex",
+    "grid",
+    "frame"
   ],
   "dependencies": {
     "@tailwind-layout-react/frame": "workspace:*",
