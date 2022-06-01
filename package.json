@@ -14,6 +14,7 @@
     "test:lint": "eslint \"**/{src}/**/*.{js,ts,tsx}\"",
     "build:packs": "pnpm --filter './packages/**' run build",
     "build:doc": "pnpm --filter=@tailwind-layout-react/gh-pages run build",
+    "start:doc": "pnpm --filter=@tailwind-layout-react/gh-pages run start",
     "build:cache": "nx run-many --target=build --all --parallel",
     "build:affected": "nx affected --target=build",
     "graph": "nx dep-graph",
