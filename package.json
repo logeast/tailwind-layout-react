@@ -18,7 +18,7 @@
     "build:cache": "nx run-many --target=build --all --parallel",
     "build:affected": "nx affected --target=build",
     "graph": "nx dep-graph",
-    "clear": "rimraf 'packages/*/{lib,tsconfig.tsbuildinfo,node_modules,.rollup.cache}' && rimraf node_modules",
+    "clear": "rimraf '*/{lib,tsconfig.tsbuildinfo,node_modules,.rollup.cache}' && rimraf node_modules",
     "changeset": "changeset",
     "release": "changeset publish",
     "commit": "git-cz"
