@@ -3,10 +3,6 @@
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
-  "engines": {
-    "node": ">=12",
-    "pnpm": ">=6"
-  },
   "scripts": {
     "postinstall": "husky install",
     "format": "lint-staged",
