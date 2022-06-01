@@ -19,7 +19,7 @@ export type NavigationProviderType = {
 
 /**
  * navigation provider component
- * @param props NavigationProviderType
+ * @param props - NavigationProviderType
  * @returns
  */
 export function NavigationProvider(props: NavigationProviderType) {

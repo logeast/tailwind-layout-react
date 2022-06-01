@@ -16,7 +16,18 @@ module.exports = {
     node: true,
   },
   rules: {
-    'no-console': ['error', { allow: ['warn', 'error'] }],
+    'no-console': [
+      'error',
+      {
+        allow: ['warn', 'error'],
+      },
+    ],
+    'object-curly-newline': [
+      'error',
+      {
+        ObjectExpression: 'always',
+      },
+    ],
 
     'import/prefer-default-export': 'off',
     'import/no-default-export': 'error',
