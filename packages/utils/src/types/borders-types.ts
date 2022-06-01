@@ -1,6 +1,7 @@
 import classNames from 'classnames';
-import { ColorType } from './colors-types';
+
 import { stringOrBooleanCls } from '../classes';
+import { ColorType } from './colors-types';
 
 // #region [Single Type]
 export declare type BorderRadiusType = 'none' | 'sm' | true | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | 'full';
@@ -111,7 +112,7 @@ export const BordersClassNames = (props: BordersProps) => {
       [`ring-${ringColor}`]: ringColor,
       [`ring-offset-${ringOffset}`]: ringOffset,
       [`ring-offset-${ringOffsetColor}`]: ringOffsetColor,
-    }
+    },
   );
 };
 // #endregion

@@ -1,7 +1,6 @@
-import * as React from 'react';
-import classNames from 'classnames';
 import { useRouter } from 'next/router';
-import Frame from 'tailwind-layout-react';
+import * as React from 'react';
+import { Frame } from 'tailwind-layout-react';
 
 export type LayoutType = {
   children: React.ReactNode;

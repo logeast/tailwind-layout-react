@@ -1,6 +1,7 @@
-import { ColorType } from './colors-types';
 import classNames from 'classnames';
+
 import { stringOrBooleanCls } from '../classes';
+import { ColorType } from './colors-types';
 
 // #region [Single Type]
 export declare type BoxShadowType = 'sm' | true | 'md' | 'lg' | 'xl' | '2xl' | 'inner' | 'none';

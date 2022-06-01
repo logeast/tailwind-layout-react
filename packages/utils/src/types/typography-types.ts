@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+
 import { ColorType } from './colors-types';
 
 // #region [Single Type]

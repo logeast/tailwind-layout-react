@@ -1,5 +1,3 @@
-import * as React from 'react';
-import classnames from 'classnames';
 import {
   AccessibilityClassNames,
   BackgroundsClassNames,
@@ -8,6 +6,8 @@ import {
   SpacingClassNames,
   TypographyClassNames,
 } from '@tailwind-layout-react/utils';
+import classnames from 'classnames';
+import * as React from 'react';
 
 import { TextProps } from './types';
 

@@ -1,7 +1,7 @@
 import {
-  BaseProps,
   AccessibilityProps,
   BackgroundsProps,
+  BaseProps,
   BordersProps,
   SizingProps,
   SpacingProps,

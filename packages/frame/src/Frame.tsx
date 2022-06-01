@@ -1,5 +1,3 @@
-import * as React from 'react';
-import classnames from 'classnames';
 import {
   AccessibilityClassNames,
   BackgroundsClassNames,
@@ -18,6 +16,8 @@ import {
   TransitionsAndAnimationClassNames,
   TypographyClassNames,
 } from '@tailwind-layout-react/utils';
+import classnames from 'classnames';
+import * as React from 'react';
 
 import { FrameProps } from './types';
 
@@ -48,7 +48,7 @@ const Frame = (props: FrameProps) => {
     SVGClassNames(props),
     TableClassNames(props),
     AccessibilityClassNames(props),
-    className
+    className,
   );
 
   return (

@@ -1,5 +1,6 @@
-import { ColorType } from './colors-types';
 import classNames from 'classnames';
+
+import { ColorType } from './colors-types';
 
 // #region [Single Type]
 export declare type BackgroundAttachmentType = 'fixed' | 'local' | 'scroll';

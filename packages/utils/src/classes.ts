@@ -1,7 +1,7 @@
 /**
  *
- * @param value Target type in the props
- * @param prefix Prefix string of the className
+ * @param value - Target type in the props
+ * @param prefix - Prefix string of the className
  * @returns The result className
  */
 export function stringOrBooleanCls(value?: string | boolean, prefix?: string) {
@@ -14,12 +14,12 @@ export function stringOrBooleanCls(value?: string | boolean, prefix?: string) {
 }
 
 /**
- * 
- * @param value Target type in the props
- * @param cls False and True className
+ *
+ * @param value - Target type in the props
+ * @param cls - False and True className
  * @returns The result className
  */
-export function booleanCls(value?: boolean, cls?: {trueCls?: string, falseCls?: string}) {
+export function booleanCls(value?: boolean, cls?: { trueCls?: string; falseCls?: string }) {
   let result;
   if (value !== undefined) {
     result = value ? cls?.trueCls : cls?.falseCls;

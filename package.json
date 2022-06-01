@@ -11,7 +11,7 @@
     "start": "concurrently -n watch,doc \"pnpm watch\" \"pnpm doc\"",
     "test": "pnpm test:lint && pnpm test:unit",
     "test:unit": "vitest",
-    "test:lint": "eslint \"**/{src}/**/*.{js,ts,tsx}\"",
+    "test:lint": "eslint \"**/{src,pages,components}/**/*.{js,ts,tsx}\"",
     "build:packs": "pnpm --filter './packages/**' run build",
     "build:doc": "pnpm --filter=@tailwind-layout-react/gh-pages run build",
     "start:doc": "pnpm --filter=@tailwind-layout-react/gh-pages run start",

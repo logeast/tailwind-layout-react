@@ -1,5 +1,6 @@
 import classNames from 'classnames';
-import { stringOrBooleanCls, booleanCls } from '../classes';
+
+import { booleanCls, stringOrBooleanCls } from '../classes';
 
 // #region [Single Type]
 export declare type BlurType = 'none' | 'sm' | true | 'md' | 'lg' | 'xl' | '2xl' | '3xl';
@@ -133,7 +134,7 @@ export const FiltersClassNames = (props: FiltersProps) => {
       [`backdrop-hue-rotate-${backdropHueRotate}`]: backdropHueRotate,
       [`backdrop-opacity-${backdropOpacity}`]: backdropOpacity,
       [`backdrop-saturate-${backdropSaturate}`]: backdropSaturate,
-    }
+    },
   );
 };
 // #endregion
