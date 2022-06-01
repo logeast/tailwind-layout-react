@@ -1,4 +1,6 @@
 import Frame from './Frame';
 
-export default Frame;
 export * from './types';
+
+export { Frame };
+export default Frame;

@@ -26,6 +26,7 @@
     "frame"
   ],
   "dependencies": {
+    "@tailwind-layout-react/flex": "workspace:*",
     "@tailwind-layout-react/frame": "workspace:*",
     "@tailwind-layout-react/text": "workspace:*",
     "@tailwind-layout-react/utils": "workspace:*"

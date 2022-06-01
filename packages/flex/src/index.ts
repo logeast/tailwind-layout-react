@@ -1,4 +1,6 @@
 import Flex from './Flex';
 
-export default Flex;
 export * from './types';
+
+export { Flex };
+export default Flex;
