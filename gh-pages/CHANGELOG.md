@@ -1,4 +1,4 @@
-# @tailwind-layout-react/text
+# @tailwind-layout-react/gh-pages
 
 ## 1.0.1
 
@@ -6,4 +6,4 @@
 
 - Add Frame package and fix package export error
 - Updated dependencies
-  - @tailwind-layout-react/utils@1.0.1
+  - tailwind-layout-react@1.0.1
