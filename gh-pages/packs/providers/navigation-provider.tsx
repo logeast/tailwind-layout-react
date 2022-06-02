@@ -29,7 +29,9 @@ export type NavigationProviderType = {
 export function NavigationProvider(props: NavigationProviderType) {
   const { children } = props;
 
-  const context = React.useMemo(() => ({}), []);
+  const context = React.useMemo(() => ({
+    setOpen: false,
+  }), []);
 
   return <NavigationContext.Provider value={context}>{children}</NavigationContext.Provider>;
 }
