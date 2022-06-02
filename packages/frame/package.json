@@ -1,6 +1,6 @@
 {
   "name": "@tailwind-layout-react/frame",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "type": "module",
   "main": "./lib/index.es.js",

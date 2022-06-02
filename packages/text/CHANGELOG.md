@@ -1,5 +1,13 @@
 # @tailwind-layout-react/text
 
+## 1.0.3
+
+### Patch Changes
+
+- fix the export error
+- Updated dependencies
+  - @tailwind-layout-react/utils@1.0.3
+
 ## 1.0.2
 
 ### Patch Changes

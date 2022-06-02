@@ -1,5 +1,11 @@
 # @tailwind-layout-react/utils
 
+## 1.0.3
+
+### Patch Changes
+
+- fix the export error
+
 ## 1.0.2
 
 ### Patch Changes
