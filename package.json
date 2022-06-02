@@ -20,6 +20,7 @@
     "graph": "nx dep-graph",
     "clear": "rimraf '**/{lib,tsconfig.tsbuildinfo,node_modules,.rollup.cache}' && rimraf node_modules",
     "changeset": "changeset",
+    "version": "changeset version",
     "release": "changeset publish",
     "commit": "git-cz"
   },

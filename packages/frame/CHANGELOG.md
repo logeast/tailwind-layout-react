@@ -1,5 +1,13 @@
 # @tailwind-layout-react/frame
 
+## 1.0.2
+
+### Patch Changes
+
+- fix the types error
+- Updated dependencies
+  - @tailwind-layout-react/utils@1.0.2
+
 ## 1.0.1
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @tailwind-layout-react/utils
 
+## 1.0.2
+
+### Patch Changes
+
+- fix the types error
+
 ## 1.0.1
 
 ### Patch Changes

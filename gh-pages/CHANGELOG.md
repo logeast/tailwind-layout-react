@@ -1,5 +1,13 @@
 # @tailwind-layout-react/gh-pages
 
+## 1.0.2
+
+### Patch Changes
+
+- fix the types error
+- Updated dependencies
+  - tailwind-layout-react@1.0.2
+
 ## 1.0.1
 
 ### Patch Changes
