@@ -38,6 +38,8 @@ export declare type RingOffsetColorType = ColorType;
 // #region [Components Props]
 export interface BordersProps {
   rounded?: BorderRadiusType;
+  radius?: BorderRadiusType;
+  borderRadius?: BorderRadiusType;
   borderWidth?: BorderWidthType;
   borderXWidth?: BorderWidthType;
   borderYWidth?: BorderWidthType;
@@ -66,6 +68,8 @@ export interface BordersProps {
 export const BordersClassNames = (props: BordersProps) => {
   const {
     rounded,
+    radius,
+    borderRadius,
     borderWidth,
     borderXWidth,
     borderYWidth,
@@ -90,6 +94,8 @@ export const BordersClassNames = (props: BordersProps) => {
   } = props;
   return classNames(
     stringOrBooleanCls(rounded, 'rounded'),
+    stringOrBooleanCls(radius, 'rounded'),
+    stringOrBooleanCls(borderRadius, 'rounded'),
     stringOrBooleanCls(borderWidth, 'border'),
     stringOrBooleanCls(borderXWidth, 'border-x'),
     stringOrBooleanCls(borderYWidth, 'border-y'),
