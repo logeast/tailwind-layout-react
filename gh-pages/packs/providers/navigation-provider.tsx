@@ -3,12 +3,16 @@ import * as React from 'react';
 /**
  * navigation context types
  */
-export type NavigationContextType = {};
+export type NavigationContextType = {
+  setOpen?: boolean;
+};
 
 /**
  * navigation context
  */
-export const NavigationContext = React.createContext<NavigationContextType>({});
+export const NavigationContext = React.createContext<NavigationContextType>({
+  setOpen: false,
+});
 
 /**
  * navigation provider types

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Frame } from 'tailwind-layout-react';
 
 export type ButtonType = {
-  type: 'primary' | 'secondary' | 'tertiary' | 'outline-primary' | 'outline-secondary' | 'outline-tertiary';
+  type: 'ghost' | '';
   children: React.ReactNode;
 };
 

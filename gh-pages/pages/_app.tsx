@@ -3,7 +3,7 @@ import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
-import { NavigationProvider } from '../components/index';
+import { Layout, NavigationProvider } from '../packs';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -13,7 +13,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
       </Head>
-      <NavigationProvider>111</NavigationProvider>
+      <NavigationProvider>
+        <Layout />
+      </NavigationProvider>
     </>
   );
 }

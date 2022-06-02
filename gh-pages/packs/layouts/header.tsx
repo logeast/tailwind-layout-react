@@ -4,7 +4,7 @@ import { Frame } from 'tailwind-layout-react';
 import { NavigationContext, NavigationContextType } from '../providers';
 
 export type HeaderType = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 
 const Header = (props: HeaderType) => {
@@ -12,7 +12,7 @@ const Header = (props: HeaderType) => {
 
   const { setOpen } = React.useContext(NavigationContext) as NavigationContextType;
 
-  return <Frame>{children}</Frame>;
+  return <Frame as="header">{children}</Frame>;
 };
 
 Header.displayName = 'Header';
