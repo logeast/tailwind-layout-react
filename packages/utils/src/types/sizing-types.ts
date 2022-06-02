@@ -73,6 +73,13 @@ const percents = [
   '10/12',
   '11/12',
 ] as const;
+
+/**
+ * Utilities for setting the width or height of an element.
+ *
+ * @example
+ * h-1 - height: 0.25rem;  // 4px
+ */
 export declare type WidthOrHeightType = typeof numbers[number] | typeof percents[number];
 
 export declare type minWithType = '0' | 'full' | 'min' | 'max' | 'fit';

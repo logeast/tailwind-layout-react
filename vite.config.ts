@@ -3,13 +3,12 @@
  * https://github.com/Saul-Mirone/milkdown/blob/main/vite.config.ts
  */
 
+import react from '@vitejs/plugin-react';
 import path from 'path';
 import { Plugin } from 'rollup';
 import autoExternal from 'rollup-plugin-auto-external';
-import { BuildOptions, UserConfig as ViteUserConfig } from 'vite';
-import { defineConfig } from 'vite';
+import { BuildOptions, defineConfig, UserConfig as ViteUserConfig } from 'vite';
 import { UserConfig } from 'vitest';
-import react from '@vitejs/plugin-react';
 
 export const libFileName = (format: string) => `index.${format}.js`;
 

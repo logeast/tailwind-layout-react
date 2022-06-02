@@ -1,1 +1,1 @@
-export type Props = Record<string, never>;
+export type NeverType = Record<string, never>;

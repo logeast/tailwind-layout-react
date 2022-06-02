@@ -12,7 +12,11 @@ const Header = (props: HeaderType) => {
 
   const { setOpen } = React.useContext(NavigationContext) as NavigationContextType;
 
-  return <Frame as="header">{children}</Frame>;
+  return (
+    <Frame as="header" position="sticky" h="14" bgColor="gray-900">
+      {children}
+    </Frame>
+  );
 };
 
 Header.displayName = 'Header';
