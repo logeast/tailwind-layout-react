@@ -13,7 +13,7 @@ const Header = (props: HeaderType) => {
   const { setOpen } = React.useContext(NavigationContext) as NavigationContextType;
 
   return (
-    <Frame as="header" position="sticky" h="14" bgColor="gray-900">
+    <Frame as="header" position="sticky" height="14" bgColor="gray-900" color="white" backdropBlur backdropOpacity="10">
       {children}
     </Frame>
   );

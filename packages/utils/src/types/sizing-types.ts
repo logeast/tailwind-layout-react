@@ -116,25 +116,33 @@ export declare type maxHeightType = typeof numbers[number];
 
 // #region [Components Props]
 export interface SizingProps {
-  w?: WidthOrHeightType;
-  minW?: minWithType;
-  maxW?: maxWithType;
-  h?: WidthOrHeightType;
-  minH?: minHeightType;
-  maxH?: maxHeightType;
+  /**
+   * Utilities for setting the width of an element.
+   * @example
+   * w-1 - width: 0.25rem; // 4px
+   */
+  width?: WidthOrHeightType;
+  /**
+   * Utilities for setting the minimum width of an element.
+   */
+  minWidth?: minWithType;
+  maxWidth?: maxWithType;
+  height?: WidthOrHeightType;
+  minHeight?: minHeightType;
+  maxHeight?: maxHeightType;
 }
 // #endregion
 
 // #region [Components ClassNames]
 export const SizingClassNames = (props: SizingProps) => {
-  const { w, minW, maxW, h, minH, maxH } = props;
+  const { width, minWidth, maxWidth, height, minHeight, maxHeight } = props;
   return classNames({
-    [`w-${w}`]: w,
-    [`minW-${minW}`]: minW,
-    [`maxW-${maxW}`]: maxW,
-    [`h-${h}`]: h,
-    [`minH-${minH}`]: minH,
-    [`maxH-${maxH}`]: maxH,
+    [`w-${width}`]: width,
+    [`minW-${minWidth}`]: minWidth,
+    [`maxW-${maxWidth}`]: maxWidth,
+    [`h-${height}`]: height,
+    [`minH-${minHeight}`]: minHeight,
+    [`maxH-${maxHeight}`]: maxHeight,
   });
 };
 // #endregion

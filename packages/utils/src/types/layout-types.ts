@@ -241,7 +241,7 @@ export const LayoutClassNames = (props: LayoutProps) => {
     [`overflow-x-${overflow}`]: overflowX,
     [`overflow-y-${overflow}`]: overflowY,
     [`overscroll-${overscrollBehavior}`]: overscrollBehavior,
-    position,
+    [`${position}`]: position,
     [`inset-${inset}`]: inset,
     [`insetX-${insetX}`]: insetX,
     [`insetY-${insetY}`]: insetY,
