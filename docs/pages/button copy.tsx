@@ -139,6 +139,125 @@ const demoList = [
     ],
     openEditor: true,
   },
+  {
+    name: 'Mixing variant and color',
+    files: [
+      {
+        name: 'button.tsx',
+        code: `<div className="flex flex-wrap w-full p-8 space-x-2">
+  <Button color="primary">Button</Button>
+  <Button variant="solid" color="primary">Button</Button>
+  <Button variant="light" color="primary">Button</Button>
+  <Button variant="ghost" color="primary">Button</Button>
+  <Button variant="link" color="primary">Button</Button>
+</div>`,
+        readOnly: false,
+      },
+    ],
+  },
+  {
+    name: 'Adding color',
+    files: [
+      {
+        name: 'button.tsx',
+        code: `<div className="flex flex-wrap w-full p-8 space-x-2">
+  <Button color="orange">Button</Button>
+  <Button variant="solid" color="orange">Button</Button>
+  <Button variant="light" color="orange">Button</Button>
+  <Button variant="ghost" color="orange">Button</Button>
+  <Button variant="link" color="orange">Button</Button>
+</div>`,
+        readOnly: false,
+      },
+      twFile,
+    ],
+  },
+  {
+    name: 'Sizes',
+    files: [
+      {
+        name: 'button.tsx',
+        code: `<div className="flex flex-wrap w-full p-8 space-x-2">
+  <Button size="xs" variant="solid" color="primary">
+    Button
+  </Button>
+  <Button size="sm" variant="solid" color="primary">
+    Button
+  </Button>
+  <Button size="md" variant="solid" color="primary">
+    Button
+  </Button>
+  <Button size="lg" variant="solid" color="primary">
+    Button
+  </Button>
+  <Button size="xl" variant="solid" color="primary">
+    Button
+  </Button>
+</div>`,
+        readOnly: false,
+      },
+    ],
+  },
+  {
+    name: 'With icons',
+    files: [
+      {
+        name: 'button.tsx',
+        code: `<div className="flex flex-wrap w-full p-8 space-x-2">
+  <Button
+    variant="solid"
+    color="primary"
+    leftIcon={<Icon as={GiftIcon} label="gift" className="w-4 h-4 mr-1" />}
+  >
+    Button
+  </Button>
+  <Button color="primary" rightIcon={<Icon as={GiftIcon} label="gift" className="w-4 h-4 ml-1" />}>
+    Button
+  </Button>
+</div>`,
+        readOnly: false,
+      },
+    ],
+  },
+  {
+    name: 'Loading state',
+    files: [
+      {
+        name: 'button.tsx',
+        code: `<div className="flex flex-wrap w-full p-8 space-x-2">
+  <Button loading>Button</Button>
+  <Button color="primary" loading loadingText="Loading...">
+    Button
+  </Button>
+</div>`,
+        readOnly: false,
+      },
+    ],
+  },
+  {
+    name: 'Button Group',
+    files: [
+      {
+        name: 'button.tsx',
+        code: `<div className="flex flex-col w-full p-8 space-y-4">
+  <Button.Group variant="solid" className="space-x-2">
+    <Button>Button</Button>
+    <Button>Button</Button>
+    <Button>Button</Button>
+    <Button>Button</Button>
+  </Button.Group>
+
+  <Button.Group variant="solid" color="primary" attached>
+    <Button>Button</Button>
+    <Button>Button</Button>
+    <Button>Button</Button>
+    <Button>Button</Button>
+  </Button.Group>
+</div>`,
+        readOnly: false,
+      },
+    ],
+  },
 ];
 
 const component = {
